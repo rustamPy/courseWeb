@@ -124,4 +124,52 @@ body {
     font-style: italic;
 }
 
-/*# sourceMappingURL=sample.css.map */
+.logo-holder {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-top: 30px;
+
+}
+
+.logo-holder h2 {
+    padding: 0;
+    margin: 0;
+    color: white;
+
+
+}
+
+.logo-holder span:before {
+    content: "Core IT";
+    animation: appear infinite 8s;
+    color: #dfdfaf;
+}
+
+@keyframes appear {
+    0% {
+        content: 'Core IT';
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    33% {
+        content: 'Basic Python';
+        opacity: 1;
+    }
+    43% {
+        opacity: 0;
+    }
+
+    66% {
+        content: 'Advanced Python';
+        opacity: 1;
+    }
+
+    76% {
+        opacity: 0;
+    }
+
+}
