@@ -1,8 +1,7 @@
 body {
     justify-content: space-around;
     background: url(../images/bg.png) no-repeat, linear-gradient(to right, #141E30, #243B55), #1c1e26;
-    background-position: bottom center;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     min-height: 100vh;
     margin: auto;
@@ -10,6 +9,10 @@ body {
     width: 0;
     height: 0;
     font-family: 'Sora', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
 }
 
 .top_logo {
@@ -21,18 +24,47 @@ body {
     width: 300px;
 }
 
-.rounded-button {
-    display: flex;
-    padding: 10px 50px;
-    border-radius: 10px;
+
+.box {
+    width: 300px;
+    height: 60px;
+    padding: 10px 40px;
     background-color: #191c25;
-    color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    margin-left: 20px;
     text-align: center;
-    text-decoration: none;
     font-size: 25px;
     cursor: pointer;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-    margin-left: 20px;
+}
+
+.box:hover {
+    height: 300px;
+    overflow: auto;
+
+}
+
+
+.box a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.box span {
+    display: none;
+}
+
+.box:hover span {
+    color: #dfdfaf;
+    margin-top: 25px;
+    display: block;
+    font-size: 20px;
+    text-align: left;
+}
+
+.box:hover a {
+    font-size: 20px;
 }
 
 .mid {
@@ -43,9 +75,11 @@ body {
     justify-content: center;
 }
 
+
 .options {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .welcome {
@@ -60,7 +94,7 @@ body {
     font-weight: 100;
     background: #243B55;
     width: 150px;
-    height: 1200px;
+    height: 120vh;
     padding-left: 50px;
     position: fixed;
     z-index: 100;
@@ -172,4 +206,48 @@ body {
         opacity: 0;
     }
 
+}
+
+
+@media only screen and (max-width: 600px) {
+    .mid {
+        margin-top: 80px;
+    }
+
+    .menu {
+        width: 100%;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .menu .title {
+        display: none;
+    }
+
+    .menu .nav {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .menu .nav li {
+        padding: 5px 10px;
+    }
+
+    .welcome span {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .options {
+        flex-direction: row;
+    }
+
+    .rounded-button {
+        flex: 1;
+        margin: 5px;
+    }
 }
