@@ -229,7 +229,7 @@ body {
 
     body {
         justify-content: space-around;
-
+        background: linear-gradient(to right, #141E30, #243B55), #1c1e26;
         background-size: cover;
         display: flex;
         min-height: 100vh;
@@ -289,8 +289,7 @@ body {
     }
 
     .menu:hover, .menu:focus {
-        transform: translate3d(-130px, 0, 0);
-        animation-timing-function: 1s ease-in;
+        transform: translate3d(-220px, 0, 0);
     }
 
     .menu .title {
@@ -303,10 +302,11 @@ body {
     .menu .nav {
         position: absolute;
         top: 50%;
-        -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         font-weight: 100;
+        margin-right: 20px;
+
     }
 
     .menu .nav li {
@@ -315,6 +315,8 @@ body {
     }
 
     .menu .nav li a {
+        font-size: 35px;
+        margin-right: 20px;
         color: #dfdfaf;
         display: block;
         text-decoration: none;
