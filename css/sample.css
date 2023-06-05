@@ -106,7 +106,6 @@ body {
 }
 
 
-
 .menu {
     font-weight: 100;
     background: #243B55;
@@ -226,7 +225,7 @@ body {
 }
 
 
-@media (min-height: 2400px) and (min-width: 1080px) {
+@media (min-height: 1280px) and (min-width: 720px) {
 
     body {
         justify-content: space-around;
@@ -244,13 +243,13 @@ body {
     .content .top .logo-holder h2 {
         font-size: 60px;
         text-align: center;
-        margin-left: 200px;
-        width: 50%;
+        margin-right: 164px;
     }
 
     .welcome {
         width: 900px;
     }
+
     .mid .welcome span#welcome-1 {
         font-size: 140px;
         margin-top: 160px;
@@ -265,8 +264,8 @@ body {
     }
 
     .mid .welcome span#welcome-2-1 {
-    font-size: 35px;
-}
+        font-size: 35px;
+    }
 
     .mid {
         margin-top: 80px;
