@@ -90,6 +90,23 @@ body {
     color: #ffffff;
 }
 
+
+.mid .welcome span#welcome-1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.mid .welcome span#welcome-2 {
+    font-size: 25px;
+    margin-bottom: 289px;
+}
+
+.mid .welcome span#welcome-2-1 {
+    font-size: 15px;
+}
+
+
+
 .menu {
     font-weight: 100;
     background: #243B55;
@@ -209,45 +226,151 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media (min-height: 2400px) and (min-width: 1080px) {
+
+    body {
+        justify-content: space-around;
+
+        background-size: cover;
+        display: flex;
+        min-height: 100vh;
+        margin: auto;
+        padding: 0;
+        width: 0;
+        height: 0;
+        font-family: 'Sora', sans-serif;
+    }
+
+    .content .top .logo-holder h2 {
+        font-size: 60px;
+        text-align: center;
+        margin-left: 200px;
+        width: 50%;
+    }
+
+    .welcome {
+        width: 900px;
+    }
+    .mid .welcome span#welcome-1 {
+        font-size: 140px;
+        margin-top: 160px;
+        margin-bottom: 20px;
+        width: 85%;
+    }
+
+    .mid .welcome span#welcome-2 {
+        font-size: 70px;
+        width: 85%;
+        margin-bottom: 200px;
+    }
+
+    .mid .welcome span#welcome-2-1 {
+    font-size: 35px;
+}
+
     .mid {
         margin-top: 80px;
     }
 
     .menu {
-        width: 100%;
-        position: static;
-        padding: 0;
-        box-shadow: none;
+        font-weight: 100;
+        background: rgb(36, 59, 85, 0.8);
+        width: 140px;
+        height: 120vh;
+        padding-left: 200px;
+        position: fixed;
+        z-index: 100;
+        -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        top: -130px;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        color: #222;
+
+    }
+
+    .menu:hover, .menu:focus {
+        transform: translate3d(-130px, 0, 0);
+        animation-timing-function: 1s ease-in;
     }
 
     .menu .title {
-        display: none;
+        position: absolute;
+        transform: rotate(270deg);
+        font-size: 50px;
+        color: #dfdfaf;
     }
 
     .menu .nav {
-        margin-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-weight: 100;
     }
 
     .menu .nav li {
-        padding: 5px 10px;
+        padding-bottom: 30px;
+        list-style-type: none;
     }
 
-    .welcome span {
-        font-size: 18px;
-        margin-bottom: 20px;
+    .menu .nav li a {
+        color: #dfdfaf;
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+    }
+
+    .menu .nav li a:hover {
+        color: #aaa;
     }
 
     .options {
-        flex-direction: row;
+        flex-direction: column;
     }
 
-    .rounded-button {
-        flex: 1;
-        margin: 5px;
+    .box {
+        width: 350px;
+        height: 200px;
+        padding: 10px 40px;
+        background-color: #191c25;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.5s ease;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 60px;
+        cursor: pointer;
     }
+
+    .box:hover {
+        height: 300px;
+        overflow: auto;
+
+    }
+
+
+    .box a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .box span {
+        display: none;
+    }
+
+    .box:hover span {
+        color: #dfdfaf;
+        margin-top: 25px;
+        display: block;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .box:hover a {
+        font-size: 30px;
+    }
+
 }

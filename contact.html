@@ -1,38 +1,68 @@
 <style>
 
-    .box {
-        width: 200px;
-        height: 100px;
-        background-color: lightgray;
-        overflow: hidden;
-        transition: height 0.5s ease;
+    .navbar {
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
     }
 
-    .box:hover {
-        height: 200px;
+    .navbar-toggle {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+        width: 30px;
     }
 
-    .text {
+    .bar {
+        background-color: #333;
+        height: 3px;
+        width: 100%;
+    }
+
+    .navbar-links {
         display: none;
-        text-align: center;
-        padding-top: 50px;
-        color: white;
-        font-weight: bold;
     }
 
-    .box:hover .text {
+    .navbar-links a {
         display: block;
+        text-decoration: none;
+        color: #333;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+        background-color: #ddd;
     }
 
 
 </style>
-<div style="display: flex; flex-direction: row;">
-<div class="box">
-    <span class="text">Hover me!</span>
-</div>
 
-<div class="box">
-    <span class="text">Hover me!</span>
-</div>
+<script>
 
+    function toggleNavbar() {
+        var navbarLinks = document.getElementById("navbarLinks");
+        navbarLinks.style.display = navbarLinks.style.display === "block" ? "none" : "block";
+    }
+
+
+</script>
+
+<div class="navbar">
+    <button class="navbar-toggle" onclick="toggleNavbar()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <div class="navbar-links" id="navbarLinks">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
 </div>
