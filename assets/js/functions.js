@@ -8,7 +8,6 @@ function telegramIt() {
     const telegram_acc = document.getElementById("telegram_acc").value;
     const message = document.getElementById("message").value;
     const text = `Name: ${name}\nSurname: ${surname}\nAge: ${age}\nEmail: ${email}\nTelegram Account: ${telegram_acc}\nMessage: ${message}`;
-    const str = '6658184943:AAEEIbgLuY9yTADPW3mvt0OGy4DdFKLTE8s'
     // Perform the AJAX request using Fetch API
     fetch(`https://api.telegram.org/bot${id}/sendMessage?chat_id=@learnitwithrustam&text=${encodeURIComponent(text)}`)
         .then(response => {
