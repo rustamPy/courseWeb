@@ -23,6 +23,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+      - name: Reveal it
+        run: echo "$BOT_ID"
 
 
 
