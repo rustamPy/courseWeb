@@ -1593,8 +1593,14 @@ footer p a:hover {
   }
 }
 
+@media (max-width: 500px) {
+    .main-header .logo a{
+        font-size: 22px;
+    }
+}
 
-@media (min-width: 768px)
-.col-md-6 {
-
+@media (max-width: 346px) {
+    .main-header .logo a{
+        font-size: 14px;
+    }
 }
