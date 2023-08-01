@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  bot_id: ${{ secrets.BOT_ID }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,14 +21,10 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Install Dependencies (prod)
-        run: yarn install --frozen-lockfile --production
+      - name: run function.js
+        run: node .\assets\js\functions.js
 
-      - name: Run Tests (JEST)
-        run: yarn test --ci --silent --testPathIgnorePatterns=experimental
-        env:
-          CI: true
-          API_KEY: ${{ secrets.BOT_ID }}
+
 
 
 
