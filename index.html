@@ -473,7 +473,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Let’s Keep In Touch</h2>
+                    <h2>Want to join? Send me message.</h2>
                 </div>
             </div>
             <div class="col-md-6" style="flex: 1 0 50% !important; max-width: 100% !important;">
@@ -487,16 +487,16 @@
 
                         <div class="col-md-6">
                             <input name="name" type="text" class="form-control" id="surname"
-                                   placeholder="Student's Surname">
+                                   placeholder="Student's Surname" required>
                         </div>
 
                         <div class="col-md-6">
-                            <input name="email" type="text" class="form-control" id="age" placeholder="Student's Age">
+                            <input name="email" type="number" class="form-control" id="age" placeholder="Student's Age" required>
                         </div>
 
                         <div class="col-md-6">
                             <input name="email" type="email" class="form-control" id="email"
-                                   placeholder="Student's Email">
+                                   placeholder="Student's Email" required>
                         </div>
 
                         <div class="col-md-6">
@@ -506,7 +506,7 @@
 
                         <div class="col-md-12">
                             <textarea name="message" rows="6" class="form-control" id="message"
-                                      placeholder="Your message..."></textarea>
+                                      placeholder="Your message..." required size="100"></textarea>
                         </div>
                         <div class="col-md-3">
                             <input type="button" class="button" onclick="telegramIt();" id="submit" value="Send">

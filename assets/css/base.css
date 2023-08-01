@@ -1604,3 +1604,9 @@ footer p a:hover {
         font-size: 14px;
     }
 }
+
+#thankYouMessage {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}

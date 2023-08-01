@@ -1,7 +1,5 @@
 function telegramIt() {
     // Combine the form fields into a single `message` variable
-    require('dotenv').config();
-    console.log(process.env);
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
     const age = document.getElementById("age").value;
@@ -9,9 +7,9 @@ function telegramIt() {
     const telegram_acc = document.getElementById("telegram_acc").value;
     const message = document.getElementById("message").value;
     const text = `Name: ${name}\nSurname: ${surname}\nAge: ${age}\nEmail: ${email}\nTelegram Account: ${telegram_acc}\nMessage: ${message}`;
-
+    const str = '6658184943:AAEEIbgLuY9yTADPW3mvt0OGy4DdFKLTE8s'
     // Perform the AJAX request using Fetch API
-    fetch(`https://api.telegram.org/bot${process.env.API_KEY}/sendMessage?chat_id=@yeqanaL&text=${encodeURIComponent(text)}`)
+    fetch(`https://api.telegram.org/bot${str}/sendMessage?chat_id=@learnitwithrustam&text=${encodeURIComponent(text)}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
@@ -24,6 +22,7 @@ function telegramIt() {
 
             // Show the "Thank you" message below the form
             const thankYouMessage = document.getElementById("thankYouMessage");
+            console.log(thankYouMessage);
             thankYouMessage.style.display = "block";
         })
         .catch(error => {
