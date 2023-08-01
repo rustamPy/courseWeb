@@ -7,20 +7,21 @@ on:
 
 
 jobs:
-  deploy:
+  comeone_WORK:
     runs-on: ubuntu-latest
 
     env:
       BOT_ID: ${{ secrets.BOT_ID }}
 
-
     steps:
-      - name: Git checkout
+      - name: Checkout code
         uses: actions/checkout@v2
 
-
-      - name: run function.js
-        run: node ./assets/js/functions.js
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
 
 
 
