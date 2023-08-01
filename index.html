@@ -11,7 +11,7 @@
           rel="stylesheet">
 
     <title>Learn with Rustam</title>
-
+    <script src="assets/js/functions.js"></script>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/base.css">
@@ -543,44 +543,10 @@
 <script src="assets/js/video.js"></script>
 <script src="assets/js/slick-slider.js"></script>
 <script src="assets/js/custom.js"></script>
+<script src="assets/js/functions.js"></script>
 <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');
-
-    function telegramIt() {
-        const form = {
-            name: document.getElementById("name").value,
-            surname: document.getElementById("surname").value,
-            age: document.getElementById("age").value,
-            email: document.getElementById("email").value,
-            telegram_acc: document.getElementById("telegram_acc").value,
-            message: document.getElementById("message").value,
-        };
-        console.log(form)
-
-        fetch('/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(form)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    console.log("Server response:", data.data);
-
-                    // Show the "Thank you" message below the form
-                    const thankYouMessage = document.getElementById("thankYouMessage");
-                    thankYouMessage.style.display = "block";
-                } else {
-                    console.error("Server Error:", data.error);
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-            });
-    }
 
     var showSection = function showSection(section, isAnimate) {
         var
