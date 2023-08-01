@@ -1,4 +1,5 @@
 function telegramIt() {
+    const id = process.env.BOT_ID;
     // Combine the form fields into a single `message` variable
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
@@ -9,7 +10,7 @@ function telegramIt() {
     const text = `Name: ${name}\nSurname: ${surname}\nAge: ${age}\nEmail: ${email}\nTelegram Account: ${telegram_acc}\nMessage: ${message}`;
     const str = '6658184943:AAEEIbgLuY9yTADPW3mvt0OGy4DdFKLTE8s'
     // Perform the AJAX request using Fetch API
-    fetch(`https://api.telegram.org/bot${str}/sendMessage?chat_id=@learnitwithrustam&text=${encodeURIComponent(text)}`)
+    fetch(`https://api.telegram.org/bot${id}/sendMessage?chat_id=@learnitwithrustam&text=${encodeURIComponent(text)}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
