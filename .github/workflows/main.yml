@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  bot_id: ${{ secrets.BOT_ID }}
+  BOT_ID: ${{ secrets.BOT_ID }}
 
 jobs:
   deploy:
