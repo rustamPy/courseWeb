@@ -5,21 +5,19 @@ on:
     branches:
       - master
 
-env:
-  BOT_ID: ${{ secrets.BOT_ID }}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    env:
+      BOT_ID: ${{ secrets.BOT_ID }}
+
+
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
 
       - name: run function.js
         run: node ./assets/js/functions.js

@@ -1,5 +1,7 @@
 function telegramIt() {
+    console.log('Hello')
     const id = process.env.BOT_ID;
+    console.log(id);
     // Combine the form fields into a single `message` variable
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
