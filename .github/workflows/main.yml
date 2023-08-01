@@ -17,6 +17,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           branch: gh-pages
-          folder: ./build # Change this to your build folder
+          folder: ./
         env:
           API_KEY: ${{ secrets.BOT_ID }}
