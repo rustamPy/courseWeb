@@ -10,13 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Git checkout
         uses: actions/checkout@v2
 
-      - name: Build and deploy
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
         with:
-          branch: gh-pages
-          folder: ./
+          node-version: 12.x
+
+      - name: Install Dependencies (prod)
+        run: yarn install --frozen-lockfile --production
+
+      - name: Run Tests (JEST)
+        run: yarn test --ci --silent --testPathIgnorePatterns=experimental
         env:
+          CI: true
           API_KEY: ${{ secrets.BOT_ID }}
+
+
+
