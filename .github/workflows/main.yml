@@ -12,6 +12,7 @@ jobs:
 
     env:
       BOT_ID: ${{ secrets.BOT_ID }}
+      POX_Q: ${{ secrets.POX_QABI }}
 
     steps:
       - name: Checkout code

@@ -1,5 +1,9 @@
 function telegramIt() {
     console.log('Hello')
+    console.log(process.env.POX_QABI)
+    console.log(process.env.TMP)
+    console.log(process.env.OS)
+    console.log(process.env.HELLO)
     const id = process.env.BOT_ID;
     console.log(id);
     // Combine the form fields into a single `message` variable
