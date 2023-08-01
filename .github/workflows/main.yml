@@ -24,7 +24,11 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
       - name: Reveal it
-        run: echo "$BOT_ID"
+        run: yarn build --all -u $BOT_ID
+
+        env:
+          BOT_ID: ${{ secrets.BOT_ID }}
+
 
 
 
