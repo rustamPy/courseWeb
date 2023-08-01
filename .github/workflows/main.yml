@@ -22,7 +22,7 @@ jobs:
           node-version: 12.x
 
       - name: run function.js
-        run: node .\assets\js\functions.js
+        run: node ./assets/js/functions.js
 
 
 
