@@ -284,7 +284,7 @@
 	}, {
 		filter: [ 'width', 'items', 'settings' ],
 		run: function(cache) {
-			var margin = this.settings.margin || '',
+			let margin = this.settings.margin || '',
 				grid = !this.settings.autoWidth,
 				rtl = this.settings.rtl,
 				css = {
@@ -300,7 +300,7 @@
 	}, {
 		filter: [ 'width', 'items', 'settings' ],
 		run: function(cache) {
-			var width = (this.width() / this.settings.items).toFixed(3) - this.settings.margin,
+			let width = (this.width() / this.settings.items).toFixed(3) - this.settings.margin,
 				merge = null,
 				iterator = this._items.length,
 				grid = !this.settings.autoWidth,
@@ -325,7 +325,7 @@
 	}, {
 		filter: [ 'items', 'settings' ],
 		run: function() {
-			var clones = [],
+			let clones = [],
 				items = this._items,
 				settings = this.settings,
 				// TODO: Should be computed from number of min width items in stage
@@ -354,7 +354,7 @@
 	}, {
 		filter: [ 'width', 'items', 'settings' ],
 		run: function() {
-			var rtl = this.settings.rtl ? 1 : -1,
+			let rtl = this.settings.rtl ? 1 : -1,
 				size = this._clones.length + this._items.length,
 				iterator = -1,
 				previous = 0,
@@ -372,7 +372,7 @@
 	}, {
 		filter: [ 'width', 'items', 'settings' ],
 		run: function() {
-			var padding = this.settings.stagePadding,
+			let padding = this.settings.stagePadding,
 				coordinates = this._coordinates,
 				css = {
 					'width': Math.ceil(Math.abs(coordinates[coordinates.length - 1])) + padding * 2,
@@ -385,7 +385,7 @@
 	}, {
 		filter: [ 'width', 'items', 'settings' ],
 		run: function(cache) {
-			var iterator = this._coordinates.length,
+			let iterator = this._coordinates.length,
 				grid = !this.settings.autoWidth,
 				items = this.$stage.children();
 
@@ -419,7 +419,7 @@
 	}, {
 		filter: [ 'width', 'position', 'items', 'settings' ],
 		run: function() {
-			var rtl = this.settings.rtl ? 1 : -1,
+			let rtl = this.settings.rtl ? 1 : -1,
 				padding = this.settings.stagePadding * 2,
 				begin = this.coordinates(this.current()) + padding,
 				end = begin + this.width() * rtl,
@@ -473,7 +473,7 @@
 	 * Create item DOM elements
 	 */
 	Owl.prototype.initializeItems = function() {
-		var $items = this.$element.find('.owl-item');
+		let $items = this.$element.find('.owl-item');
 
 		// if the items are already in the DOM, grab them and skip item initialization
 		if ($items.length) {
@@ -518,7 +518,7 @@
 		this.$element.toggleClass(this.settings.rtlClass, this.settings.rtl);
 
 		if (this.settings.autoWidth && !this.is('pre-loading')) {
-			var imgs, nestedSelector, width;
+			let imgs, nestedSelector, width;
 			imgs = this.$element.find('img');
 			nestedSelector = this.settings.nestedItemSelector ? '.' + this.settings.nestedItemSelector : undefined;
 			width = this.$element.children(nestedSelector).width();
@@ -556,7 +556,7 @@
 	 * @public
 	 */
 	Owl.prototype.setup = function() {
-		var viewport = this.viewport(),
+		let viewport = this.viewport(),
 			overwrites = this.options.responsive,
 			match = -1,
 			settings = null;
@@ -609,7 +609,7 @@
 	 * @returns {jQuery|HTMLElement} - The item container.
 	 */
 	Owl.prototype.prepare = function(item) {
-		var event = this.trigger('prepare', { content: item });
+		let event = this.trigger('prepare', { content: item });
 
 		if (!event.data) {
 			event.data = $('<' + this.settings.itemElement + '/>')
@@ -626,7 +626,7 @@
 	 * @public
 	 */
 	Owl.prototype.update = function() {
-		var i = 0,
+		let i = 0,
 			n = this._pipe.length,
 			filter = $.proxy(function(p) { return this[p] }, this._invalidated),
 			cache = {};
@@ -758,7 +758,7 @@
 	 * @param {Event} event - The event arguments.
 	 */
 	Owl.prototype.onDragStart = function(event) {
-		var stage = null;
+		let stage = null;
 
 		if (event.which === 3) {
 			return;
@@ -798,7 +798,7 @@
 		$(document).on('mouseup.owl.core touchend.owl.core', $.proxy(this.onDragEnd, this));
 
 		$(document).one('mousemove.owl.core touchmove.owl.core', $.proxy(function(event) {
-			var delta = this.difference(this._drag.pointer, this.pointer(event));
+			let delta = this.difference(this._drag.pointer, this.pointer(event));
 
 			$(document).on('mousemove.owl.core touchmove.owl.core', $.proxy(this.onDragMove, this));
 
@@ -820,7 +820,7 @@
 	 * @param {Event} event - The event arguments.
 	 */
 	Owl.prototype.onDragMove = function(event) {
-		var minimum = null,
+		let minimum = null,
 			maximum = null,
 			pull = null,
 			delta = this.difference(this._drag.pointer, this.pointer(event)),
@@ -856,7 +856,7 @@
 	 * @param {Event} event - The event arguments.
 	 */
 	Owl.prototype.onDragEnd = function(event) {
-		var delta = this.difference(this._drag.pointer, this.pointer(event)),
+		let delta = this.difference(this._drag.pointer, this.pointer(event)),
 			stage = this._drag.stage.current,
 			direction = delta.x > 0 ^ this.settings.rtl ? 'left' : 'right';
 
@@ -894,7 +894,7 @@
 	 * @return {Number} - The absolute position of the closest item.
 	 */
 	Owl.prototype.closest = function(coordinate, direction) {
-		var position = -1,
+		let position = -1,
 			pull = 30,
 			width = this.width(),
 			coordinates = this.coordinates();
@@ -936,7 +936,7 @@
 	 * @param {Number} coordinate - The coordinate in pixels.
 	 */
 	Owl.prototype.animate = function(coordinate) {
-		var animate = this.speed() > 0;
+		let animate = this.speed() > 0;
 
 		this.is('animating') && this.onTransitionEnd();
 
@@ -990,7 +990,7 @@
 		position = this.normalize(position);
 
 		if (this._current !== position) {
-			var event = this.trigger('change', { property: { name: 'position', value: position } });
+			let event = this.trigger('change', { property: { name: 'position', value: position } });
 
 			if (event.data !== undefined) {
 				position = this.normalize(event.data);
@@ -1049,7 +1049,7 @@
 	 * @returns {Number} - The normalized position.
 	 */
 	Owl.prototype.normalize = function(position, relative) {
-		var n = this._items.length,
+		let n = this._items.length,
 			m = relative ? 0 : this._clones.length;
 
 		if (!this.isNumeric(position) || n < 1) {
@@ -1079,7 +1079,7 @@
 	 * @returns {Number}
 	 */
 	Owl.prototype.maximum = function(relative) {
-		var settings = this.settings,
+		let settings = this.settings,
 			maximum = this._coordinates.length,
 			iterator,
 			reciprocalItemsWidth,
@@ -1160,7 +1160,7 @@
 	 * @returns {Array.<Number>} - The absolute positions of clones for the item or all if no position was given.
 	 */
 	Owl.prototype.clones = function(position) {
-		var odd = this._clones.length / 2,
+		let odd = this._clones.length / 2,
 			even = odd + this._items.length,
 			map = function(index) { return index % 2 === 0 ? even + index / 2 : odd - (index + 1) / 2 };
 
@@ -1193,7 +1193,7 @@
 	 * @returns {Number|Array.<Number>} - The coordinate of the item in pixel or all coordinates.
 	 */
 	Owl.prototype.coordinates = function(position) {
-		var multiplier = 1,
+		let multiplier = 1,
 			newPosition = position - 1,
 			coordinate;
 
@@ -1243,7 +1243,7 @@
 	 * @param {Number} [speed] - The time in milliseconds for the transition.
 	 */
 	Owl.prototype.to = function(position, speed) {
-		var current = this.current(),
+		let current = this.current(),
 			revert = null,
 			distance = position - this.relative(current),
 			direction = (distance > 0) - (distance < 0),
@@ -1326,7 +1326,7 @@
 	 * @return {Number} - The width in pixel.
 	 */
 	Owl.prototype.viewport = function() {
-		var width;
+		let width;
 		if (this.options.responsiveBaseElement !== window) {
 			width = $(this.options.responsiveBaseElement).width();
 		} else if (window.innerWidth) {
@@ -1378,7 +1378,7 @@
 	 * @param {Number} [position] - The relative position at which to insert the item otherwise the item will be added to the end.
 	 */
 	Owl.prototype.add = function(content, position) {
-		var current = this.relative(this._current);
+		let current = this.relative(this._current);
 
 		position = position === undefined ? this._items.length : this.normalize(position, true);
 		content = content instanceof jQuery ? content : $(content);
@@ -1462,7 +1462,7 @@
 			this.off(window, 'resize', this._handlers.onThrottledResize);
 		}
 
-		for (var i in this._plugins) {
+		for (let i in this._plugins) {
 			this._plugins[i].destroy();
 		}
 
@@ -1491,7 +1491,7 @@
 	 * @param {Number} [b] - The right side operand.
 	 */
 	Owl.prototype.op = function(a, o, b) {
-		var rtl = this.settings.rtl;
+		let rtl = this.settings.rtl;
 		switch (o) {
 			case '<':
 				return rtl ? a > b : a < b;
@@ -1550,7 +1550,7 @@
 	 * @returns {Event} - The event arguments.
 	 */
 	Owl.prototype.trigger = function(name, data, namespace, state, enter) {
-		var status = {
+		let status = {
 			item: { count: this._items.length, index: this.current() }
 		}, handler = $.camelCase(
 			$.grep([ 'on', name, namespace ], function(v) { return v })
@@ -1614,7 +1614,7 @@
 			}
 
 			if (!$.event.special[object.name].owl) {
-				var _default = $.event.special[object.name]._default;
+				let _default = $.event.special[object.name]._default;
 				$.event.special[object.name]._default = function(e) {
 					if (_default && _default.apply && (!e.namespace || e.namespace.indexOf('owl') === -1)) {
 						return _default.apply(this, arguments);
@@ -1666,7 +1666,7 @@
 	 * @returns {Object} - Contains `x` and `y` coordinates of current pointer position.
 	 */
 	Owl.prototype.pointer = function(event) {
-		var result = { x: null, y: null };
+		let result = { x: null, y: null };
 
 		event = event.originalEvent || event || window.event;
 
@@ -1716,10 +1716,10 @@
 	 * @public
 	 */
 	$.fn.owlCarousel = function(option) {
-		var args = Array.prototype.slice.call(arguments, 1);
+		let args = Array.prototype.slice.call(arguments, 1);
 
 		return this.each(function() {
-			var $this = $(this),
+			let $this = $(this),
 				data = $this.data('owl.carousel');
 
 			if (!data) {
@@ -1768,7 +1768,7 @@
 	 * @class The Auto Refresh Plugin
 	 * @param {Owl} carousel - The Owl Carousel
 	 */
-	var AutoRefresh = function(carousel) {
+	let AutoRefresh = function(carousel) {
 		/**
 		 * Reference to the core.
 		 * @protected
@@ -1850,7 +1850,7 @@
 	 * Destroys the plugin.
 	 */
 	AutoRefresh.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		window.clearInterval(this._interval);
 
@@ -1880,7 +1880,7 @@
 	 * @class The Lazy Plugin
 	 * @param {Owl} carousel - The Owl Carousel
 	 */
-	var Lazy = function(carousel) {
+	let Lazy = function(carousel) {
 
 		/**
 		 * Reference to the core.
@@ -1912,7 +1912,7 @@
 				}
 
 				if ((e.property && e.property.name == 'position') || e.type == 'initialized') {
-					var settings = this._core.settings,
+					let settings = this._core.settings,
 						n = (settings.center && Math.ceil(settings.items / 2) || settings.items),
 						i = ((settings.center && n * -1) || 0),
 						position = (e.property && e.property.value !== undefined ? e.property.value : this._core.current()) + i,
@@ -1959,7 +1959,7 @@
 	 * @protected
 	 */
 	Lazy.prototype.load = function(position) {
-		var $item = this._core.$stage.children().eq(position),
+		let $item = this._core.$stage.children().eq(position),
 			$elements = $item && $item.find('.owl-lazy');
 
 		if (!$elements || $.inArray($item.get(0), this._loaded) > -1) {
@@ -1967,7 +1967,7 @@
 		}
 
 		$elements.each($.proxy(function(index, element) {
-			var $element = $(element), image,
+			let $element = $(element), image,
                 url = (window.devicePixelRatio > 1 && $element.attr('data-src-retina')) || $element.attr('data-src') || $element.attr('data-srcset');
 
 			this._core.trigger('load', { element: $element, url: url }, 'lazy');
@@ -2002,7 +2002,7 @@
 	 * @public
 	 */
 	Lazy.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		for (handler in this.handlers) {
 			this._core.$element.off(handler, this.handlers[handler]);
@@ -2030,7 +2030,7 @@
 	 * @class The Auto Height Plugin
 	 * @param {Owl} carousel - The Owl Carousel
 	 */
-	var AutoHeight = function(carousel) {
+	let AutoHeight = function(carousel) {
 		/**
 		 * Reference to the core.
 		 * @protected
@@ -2070,7 +2070,7 @@
 		// register event handlers
 		this._core.$element.on(this._handlers);
 		this._intervalId = null;
-		var refThis = this;
+		let refThis = this;
 
 		// These changes have been taken from a PR by gavrochelegnou proposed in #1575
 		// and have been made compatible with the latest jQuery version
@@ -2110,7 +2110,7 @@
 	 * Updates the view.
 	 */
 	AutoHeight.prototype.update = function() {
-		var start = this._core._current,
+		let start = this._core._current,
 			end = start + this._core.settings.items,
 			lazyLoadEnabled = this._core.settings.lazyLoad,
 			visible = this._core.$stage.children().toArray().slice(start, end),
@@ -2135,7 +2135,7 @@
 	};
 
 	AutoHeight.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		for (handler in this._handlers) {
 			this._core.$element.off(handler, this._handlers[handler]);
@@ -2163,7 +2163,7 @@
 	 * @class The Video Plugin
 	 * @param {Owl} carousel - The Owl Carousel
 	 */
-	var Video = function(carousel) {
+	let Video = function(carousel) {
 		/**
 		 * Reference to the core.
 		 * @protected
@@ -2217,7 +2217,7 @@
 					return;
 				}
 
-				var $element = $(e.content).find('.owl-video');
+				let $element = $(e.content).find('.owl-video');
 
 				if ($element.length) {
 					$element.css('display', 'none');
@@ -2254,7 +2254,7 @@
 	 * @param {jQuery} item - The item containing the video.
 	 */
 	Video.prototype.fetch = function(target, item) {
-			var type = (function() {
+			let type = (function() {
 					if (target.attr('data-vimeo-id')) {
 						return 'vimeo';
 					} else if (target.attr('data-vzaar-id')) {
@@ -2318,7 +2318,7 @@
 	 * @see `fetch`
 	 */
 	Video.prototype.thumbnail = function(target, video) {
-		var tnLink,
+		let tnLink,
 			icon,
 			path,
 			dimensions = video.width && video.height ? 'width:' + video.width + 'px;height:' + video.height + 'px;' : '',
@@ -2409,7 +2409,7 @@
 	 * @param {Event} event - The event arguments.
 	 */
 	Video.prototype.play = function(event) {
-		var target = $(event.target),
+		let target = $(event.target),
 			item = target.closest('.' + this._core.settings.itemClass),
 			video = this._videos[item.attr('data-video')],
 			width = video.width || '100%',
@@ -2451,7 +2451,7 @@
 	 * @returns {Boolean}
 	 */
 	Video.prototype.isInFullScreen = function() {
-		var element = document.fullscreenElement || document.mozFullScreenElement ||
+		let element = document.fullscreenElement || document.mozFullScreenElement ||
 				document.webkitFullscreenElement;
 
 		return element && $(element).parent().hasClass('owl-video-frame');
@@ -2461,7 +2461,7 @@
 	 * Destroys the plugin.
 	 */
 	Video.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		this._core.$element.off('click.owl.video');
 
@@ -2491,7 +2491,7 @@
 	 * @class The Navigation Plugin
 	 * @param {Owl} scope - The Owl Carousel
 	 */
-	var Animate = function(scope) {
+	let Animate = function(scope) {
 		this.core = scope;
 		this.core.options = $.extend({}, Animate.Defaults, this.core.options);
 		this.swapping = true;
@@ -2546,7 +2546,7 @@
 
 		this.core.speed(0);
 
-		var left,
+		let left,
 			clear = $.proxy(this.clear, this),
 			previous = this.core.$stage.children().eq(this.previous),
 			next = this.core.$stage.children().eq(this.next),
@@ -2585,7 +2585,7 @@
 	 * @public
 	 */
 	Animate.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		for (handler in this.handlers) {
 			this.core.$element.off(handler, this.handlers[handler]);
@@ -2615,7 +2615,7 @@
 	 * @class The Autoplay Plugin
 	 * @param {Owl} scope - The Owl Carousel
 	 */
-	var Autoplay = function(carousel) {
+	let Autoplay = function(carousel) {
 		/**
 		 * Reference to the core.
 		 * @protected
@@ -2756,7 +2756,7 @@
 	 * @param {Number} [speed] - The animation speed for the animations.
 	 */
 	Autoplay.prototype.play = function(timeout, speed) {
-		var elapsed;
+		let elapsed;
 
 		if (!this._core.is('rotating')) {
 			this._core.enter('rotating');
@@ -2817,7 +2817,7 @@
 	 * Destroys the plugin.
 	 */
 	Autoplay.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		this.stop();
 
@@ -2848,7 +2848,7 @@
 	 * @class The Navigation Plugin
 	 * @param {Owl} carousel - The Owl Carousel.
 	 */
-	var Navigation = function(carousel) {
+	let Navigation = function(carousel) {
 		/**
 		 * Reference to the core.
 		 * @protected
@@ -2989,7 +2989,7 @@
 	 * @protected
 	 */
 	Navigation.prototype.initialize = function() {
-		var override,
+		let override,
 			settings = this._core.settings;
 
 		// create DOM structure for relative navigation
@@ -3023,7 +3023,7 @@
 			: $('<div>').addClass(settings.dotsClass).appendTo(this.$element)).addClass('disabled');
 
 		this._controls.$absolute.on('click', 'button', $.proxy(function(e) {
-			var index = $(e.target).parent().is(this._controls.$absolute)
+			let index = $(e.target).parent().is(this._controls.$absolute)
 				? $(e.target).index() : $(e.target).parent().index();
 
 			e.preventDefault();
@@ -3055,7 +3055,7 @@
 	 * @protected
 	 */
 	Navigation.prototype.destroy = function() {
-		var handler, control, property, override, settings;
+		let handler, control, property, override, settings;
 		settings = this._core.settings;
 
 		for (handler in this._handlers) {
@@ -3081,7 +3081,7 @@
 	 * @protected
 	 */
 	Navigation.prototype.update = function() {
-		var i, j, k,
+		let i, j, k,
 			lower = this._core.clones().length / 2,
 			upper = lower + this._core.items().length,
 			maximum = this._core.maximum(true),
@@ -3118,7 +3118,7 @@
 	 * @protected
 	 */
 	Navigation.prototype.draw = function() {
-		var difference,
+		let difference,
 			settings = this._core.settings,
 			disabled = this._core.items().length <= settings.items,
 			index = this._core.relative(this._core.current()),
@@ -3155,7 +3155,7 @@
 	 * @param {Event} event - The event object which gets thrown.
 	 */
 	Navigation.prototype.onTrigger = function(event) {
-		var settings = this._core.settings;
+		let settings = this._core.settings;
 
 		event.page = {
 			index: $.inArray(this.current(), this._pages),
@@ -3171,7 +3171,7 @@
 	 * @returns {Number}
 	 */
 	Navigation.prototype.current = function() {
-		var current = this._core.relative(this._core.current());
+		let current = this._core.relative(this._core.current());
 		return $.grep(this._pages, $.proxy(function(page, index) {
 			return page.start <= current && page.end >= current;
 		}, this)).pop();
@@ -3183,7 +3183,7 @@
 	 * @returns {Number}
 	 */
 	Navigation.prototype.getPosition = function(successor) {
-		var position, length,
+		let position, length,
 			settings = this._core.settings;
 
 		if (settings.slideBy == 'page') {
@@ -3226,7 +3226,7 @@
 	 * @param {Boolean} [standard=false] - Whether to use the standard behaviour or not.
 	 */
 	Navigation.prototype.to = function(position, speed, standard) {
-		var length;
+		let length;
 
 		if (!standard && this._pages.length) {
 			length = this._pages.length;
@@ -3255,7 +3255,7 @@
 	 * @class The Hash Plugin
 	 * @param {Owl} carousel - The Owl Carousel
 	 */
-	var Hash = function(carousel) {
+	let Hash = function(carousel) {
 		/**
 		 * Reference to the core.
 		 * @protected
@@ -3289,7 +3289,7 @@
 			}, this),
 			'prepared.owl.carousel': $.proxy(function(e) {
 				if (e.namespace) {
-					var hash = $(e.content).find('[data-hash]').addBack('[data-hash]').attr('data-hash');
+					let hash = $(e.content).find('[data-hash]').addBack('[data-hash]').attr('data-hash');
 
 					if (!hash) {
 						return;
@@ -3300,7 +3300,7 @@
 			}, this),
 			'changed.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && e.property.name === 'position') {
-					var current = this._core.items(this._core.relative(this._core.current())),
+					let current = this._core.items(this._core.relative(this._core.current())),
 						hash = $.map(this._hashes, function(item, hash) {
 							return item === current ? hash : null;
 						}).join();
@@ -3322,7 +3322,7 @@
 
 		// register event listener for hash navigation
 		$(window).on('hashchange.owl.navigation', $.proxy(function(e) {
-			var hash = window.location.hash.substring(1),
+			let hash = window.location.hash.substring(1),
 				items = this._core.$stage.children(),
 				position = this._hashes[hash] && items.index(this._hashes[hash]);
 
@@ -3347,7 +3347,7 @@
 	 * @public
 	 */
 	Hash.prototype.destroy = function() {
-		var handler, property;
+		let handler, property;
 
 		$(window).off('hashchange.owl.navigation');
 
@@ -3374,7 +3374,7 @@
  */
 ;(function($, window, document, undefined) {
 
-	var style = $('<support>').get(0).style,
+	let style = $('<support>').get(0).style,
 		prefixes = 'Webkit Moz O ms'.split(' '),
 		events = {
 			transition: {
@@ -3410,7 +3410,7 @@
 		};
 
 	function test(property, prefixed) {
-		var result = false,
+		let result = false,
 			upper = property.charAt(0).toUpperCase() + property.slice(1);
 
 		$.each((property + ' ' + prefixes.join(upper + ' ') + upper).split(' '), function(i, property) {

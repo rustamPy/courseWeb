@@ -2,6 +2,27 @@
 <html lang="en">
 
 <head>
+    <style>
+        .hidden-details {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            padding: 2px;
+            margin-top: 10px;
+            transition: max-height, padding-top 0.2s ease; /* Add transition for smooth animation */
+        }
+
+        /* Show when the corresponding item is clicked */
+        .item.active .hidden-details {
+            padding: 10px;
+            max-height: 500px; /* Set the max height to a larger value to allow smooth expansion */
+
+        }
+
+
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QMJMV5J8Q"></script>
     <script>
@@ -152,22 +173,64 @@
             <div class="col-md-12">
                 <div id='tabs'>
                     <ul>
-                        <li><a href='#tabs-1'>IT Experience</a></li>
-                        <li><a href='#tabs-2'>Top Management</a></li>
+                        <li><a href='#tabs-1'>About me</a></li>
+                        <li><a href='#tabs-2'>Detail-oriented</a></li>
                         <li><a href='#tabs-3'>Quality Meeting</a></li>
                     </ul>
                     <section class='tabs-content'>
                         <article id='tabs-1'>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <img src="assets/images/choose-us-image-01.png" alt="">
+                                <div class="col-md-6" style="margin-top: 120px;">
+                                    <img src="assets/images/photos/me.jpg" alt="">
+                                    <img src="assets/images/photos/me_group.jpg" alt="">
                                 </div>
+
                                 <div class="col-md-6">
-                                    <h4>IT Experience</h4>
-                                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout.
-                                        Feel free to use it for educational or commercial purposes. You may want to make
-                                        <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little
-                                            donation</a> to TemplateMo. Please tell your friends about us. Thank you.
+                                    <h4>About me</h4>
+                                    <p>Hello there, I am Rustam Karimov, a driven and versatile individual with a
+                                        background
+                                        in teaching Computer Science and a strong foothold in the world of software
+                                        engineering. My journey in the tech industry began with a passion for computer
+                                        programming, which eventually led me to pursue a career that <i> combines both
+                                            education and cutting-edge software development. </i>
+
+                                        <br>
+                                        <br>
+
+                                        <mark> I started my professional journey as an educator</mark>
+                                        , sharing my enthusiasm for
+                                        Computer Science with aspiring learners. Teaching has always been a rewarding
+                                        experience for me. <i> Guiding students, breaking down complex topics into
+                                            understandable pieces, and witnessing their growth as they developed
+                                            programming
+                                            skills brought me immense joy and fulfillment </i>. My time as a Computer
+                                        Science
+                                        instructor laid the foundation for my future endeavors in the tech world.
+
+                                        <br>
+                                        <br>
+
+                                        Driven by a thirst for knowledge and a desire to apply my skills in real-world
+                                        scenarios, I transitioned into the role of a Software Engineer. Joining the
+                                        esteemed team at <i> Union Bank of Switzerland (UBS) </i> has been a significant
+                                        milestone in my career.
+                                        <mark> As a Python-based Software Engineer</mark>
+                                        , I actively
+                                        contribute to developing sophisticated solutions that empower the finance
+                                        industry.
+
+                                        <br>
+                                        <br>
+
+                                        Beyond my work at UBS, I remain
+                                        <mark>dedicated to nurturing the next generation of
+                                            developers.
+                                        </mark>
+                                        I firmly believe that education plays a pivotal role in shaping the
+                                        future of technology. My teaching experience has instilled in me a passion for
+                                        sharing knowledge and inspiring others to embark on their own tech journeys.
+
+
                                     </p>
                                 </div>
                             </div>
@@ -178,12 +241,22 @@
                                     <img src="assets/images/choose-us-image-02.png" alt="">
                                 </div>
                                 <div class="col-md-6">
-                                    <h4>Top Level</h4>
-                                    <p>You can modify this HTML layout by editing contents and adding more pages as you
-                                        needed. Since this template has options to add dropdown menus, you can put many
-                                        HTML pages.</p>
-                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec
-                                        interdum quam felis non ante.</p>
+                                    <h4>Every detail has meaning!</h4>
+                                    <p>"Every detail has meaning" becomes my guiding principle, ensuring that you will
+                                        get highly standardized materials and lectures prepared by me. Here are some
+                                        key aspects that highlight the detail-oriented features of your online Python
+                                        courses:
+
+                                        1. Each topic and module is carefully selected and sequenced to provide a
+                                        logical and smooth learning journey for you.
+
+                                        2. Courses you took, don't merely skim the surface of its concepts. Instead, you
+                                        dive deep into each topic, providing in-depth explanations that empower your
+                                        students with a profound understanding of the language's intricacies.
+
+                                        3. You emphasize the significance of following best practices and
+                                        coding conventions. By instilling these industry standards, you equip your
+                                        students with the tools to write clean, efficient, and maintainable code.
                                 </div>
                             </div>
                         </article>
@@ -289,10 +362,10 @@
                 </div>
             </div>
             <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <img src="assets/images/courses-01.jpg" alt="Course #1">
+                <div class="item" id="course-1">
+                    <img src="assets/images/courses-thumbnails/cit_base.jpg" alt="Course #1">
                     <div class="down-content">
-                        <h4>Digital Marketing</h4>
+                        <h4>Core IT - Entry</h4>
                         <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and
                             Pexels.</p>
                         <div class="author-image">
@@ -302,137 +375,82 @@
                             <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
+                    <div class="hidden-details">
+                        <p>These are details about Course #3! These are details about Course #3!These are details about
+                            Course #3!These are details about Course #3!These are details about Course #3!These are
+                            details about Course #3!These are details about Course #3!These are details about Course
+                            #3!These are details about Course #3!These are details about Course #3!These are details
+                            about Course #3!These are details about Course #3!</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="assets/images/courses-02.jpg" alt="Course #2">
+                <div class="item" id="course-2">
+                    <img src="assets/images/courses-thumbnails/cit_inter.jpg" alt="Course #2">
                     <div class="down-content">
-                        <h4>Business World</h4>
+                        <h4>Core IT - Intermediate</h4>
                         <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum
                             porta.</p>
                         <div class="author-image">
-                            <img src="assets/images/author-02.png" alt="Author 2">
+                            <img src="assets/images/author-01.png" alt="Author 2">
                         </div>
                         <div class="text-button-free">
                             <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
+                    <div class="hidden-details">
+                        <p>These are details about Course #3! These are details about Course #3!These are details about
+                            Course #3!These are details about Course #3!These are details about Course #3!These are
+                            details about Course #3!These are details about Course #3!These are details about Course
+                            #3!These are details about Course #3!These are details about Course #3!These are details
+                            about Course #3!These are details about Course #3!</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="assets/images/courses-03.jpg" alt="Course #3">
+                <div class="item" id="course-3">
+                    <img src="assets/images/courses-thumbnails/python_entry.jpg" alt="Course #3">
                     <div class="down-content">
-                        <h4>Media Technology</h4>
+                        <h4>Python - Entry</h4>
                         <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
                             lobortis enim.</p>
                         <div class="author-image">
-                            <img src="assets/images/author-03.png" alt="Author 3">
+                            <img src="assets/images/author-01.png" alt="Author 3">
                         </div>
                         <div class="text-button-pay">
                             <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
+                    <div class="hidden-details">
+                        <p>These are details about Course #3! These are details about Course #3!These are details about
+                            Course #3!These are details about Course #3!These are details about Course #3!These are
+                            details about Course #3!These are details about Course #3!These are details about Course
+                            #3!These are details about Course #3!These are details about Course #3!These are details
+                            about Course #3!These are details about Course #3!</p>
+                    </div>
                 </div>
-                <div class="item">
-                    <img src="assets/images/courses-04.jpg" alt="Course #4">
+                <div class="item" id="course-4">
+                    <img src="assets/images/courses-thumbnails/python_inter.jpg" alt="Course #4">
                     <div class="down-content">
-                        <h4>Communications</h4>
+                        <h4>Python - Intermediate</h4>
                         <p>Download free images and videos for your websites by visiting Unsplash, Pixabay, and
                             Pexels.</p>
                         <div class="author-image">
-                            <img src="assets/images/author-04.png" alt="Author 4">
+                            <img src="assets/images/author-01.png" alt="Author 4">
                         </div>
                         <div class="text-button-free">
                             <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/courses-05.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Business Ethics</h4>
-                        <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
-                            lobortis enim.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-05.png" alt="">
-                        </div>
-                        <div class="text-button-pay">
-                            <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-                        </div>
+
+                    <div class="hidden-details">
+                        <p>These are details about Course #3! These are details about Course #3!These are details about
+                            Course #3!These are details about Course #3!These are details about Course #3!These are
+                            details about Course #3!These are details about Course #3!These are details about Course
+                            #3!These are details about Course #3!These are details about Course #3!These are details
+                            about Course #3!These are details about Course #3!</p>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="assets/images/courses-01.jpg" alt="">
+                <div class="item" id="course-5">
+                    <img src="assets/images/courses-thumbnails/python_advanced.jpg" alt="">
                     <div class="down-content">
-                        <h4>Photography</h4>
-                        <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum
-                            porta.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-01.png" alt="">
-                        </div>
-                        <div class="text-button-free">
-                            <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/courses-02.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Web Development</h4>
-                        <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
-                            lobortis enim.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-02.png" alt="">
-                        </div>
-                        <div class="text-button-free">
-                            <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/courses-03.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Learn HTML CSS</h4>
-                        <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and
-                            Pexels.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-03.png" alt="">
-                        </div>
-                        <div class="text-button-pay">
-                            <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/courses-04.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Social Media</h4>
-                        <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
-                            lobortis enim.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-04.png" alt="">
-                        </div>
-                        <div class="text-button-pay">
-                            <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/courses-05.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Digital Arts</h4>
-                        <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum
-                            porta.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-05.png" alt="">
-                        </div>
-                        <div class="text-button-free">
-                            <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="assets/images/courses-01.jpg" alt="">
-                    <div class="down-content">
-                        <h4>Media Streaming</h4>
+                        <h4>Python - Advanced</h4>
                         <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
                             lobortis enim.</p>
                         <div class="author-image">
@@ -441,13 +459,20 @@
                         <div class="text-button-pay">
                             <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
                         </div>
+                    </div>
+                    <div class="hidden-details">
+                        <img src="assets/images/python_logo.png">
+                        <p>These are details about Course #3! These are details about Course #3!These are details about
+                            Course #3!These are details about Course #3!These are details about Course #3!These are
+                            details about Course #3!These are details about Course #3!These are details about Course
+                            #3!These are details about Course #3!These are details about Course #3!These are details
+                            about Course #3!These are details about Course #3!</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <section class="section video" data-section="section5">
     <div class="container">
@@ -608,8 +633,27 @@
     $(window).scroll(function () {
         checkSection();
     });
+    //////////////////////////////////////////////////////////////////////////
+    // JavaScript to toggle the hidden details section
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".item");
 
+        items.forEach(function (item) {
+            item.addEventListener("click", function () {
+                // Toggle the "active" class to smoothly show/hide the details
+                item.classList.toggle("active");
+            });
+        });
 
+        // Hide the details section when clicking outside the item or the hidden details itself
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".item")) {
+                items.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+            }
+        });
+    });
 </script>
 </body>
 </html>

@@ -105,13 +105,13 @@ a.menu-link { display: none; }
     position: relative;
     margin: 0;
     padding: 0;
-    border-top: 1px solid rgba(250,250,250,0.25);
+    /*border-top: 1px solid rgba(250,250,250,0.25);*/
     background-color: rgba(22,34,57,0.99);
   }
   nav[role="navigation"] li a {
     display: block;
     padding: 15px 0px;
-    border-bottom: 1px solid rgba(250,250,250,0.25);
+    /*border-bottom: 1px solid rgba(250,250,250,0.25);*/
     text-align: center;
     color: #fff;
     font-size: 13px;
@@ -239,7 +239,7 @@ a.menu-link { display: none; }
     margin-left: 0px;
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #121b2f;
+    /*border-bottom: 1px solid #121b2f;*/
 }
 
 .main-menu li .sub-menu li:first-child {
@@ -273,8 +273,8 @@ a.menu-link { display: none; }
 @media (max-width: 950px) {
   .main-nav li:hover a,
   .main-nav li.active a {
-    border: 2px solid transparent;
-    border-bottom: 1px solid rgba(250,250,250,0.25);
+    /*border: 2px solid transparent;
+    border-bottom: 1px solid rgba(250,250,250,0.25);*/
   }
 }
 
@@ -1559,6 +1559,7 @@ footer p a:hover {
   .main-header .logo {
     line-height: 73px;
       padding: 5px;
+      margin-bottom: -10px;
   }
   .main-menu li {
     display: block;
@@ -1575,7 +1576,7 @@ footer p a:hover {
     width: 100%;
   }
   .main-menu li .sub-menu li:last-child {
-    border-bottom: 1px solid rgba(250,250,250,0.25);
+    /*border-bottom: 1px solid rgba(250,250,250,0.25);*/
   }
 }
 
@@ -1611,4 +1612,8 @@ footer p a:hover {
     color: white;
     text-align: center;
     font-size: 40px;
+}
+
+.tabs-content img {
+    margin-bottom: 20px;
 }
