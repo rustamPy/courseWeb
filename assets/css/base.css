@@ -1617,3 +1617,7 @@ footer p a:hover {
 .tabs-content img {
     margin-bottom: 20px;
 }
+
+.owl-stage {
+    transition: none !important;
+}
