@@ -5,13 +5,14 @@
     <style>
         .hidden-details {
             max-height: 0;
-            overflow: hidden;
+            overflow: auto;
+            font-size: 20px;
             background-color: #ffffff;
             border: 1px solid #dddddd;
             border-radius: 5px;
             padding: 2px;
             margin-top: 10px;
-            transition: max-height, padding-top 0.2s ease; /* Add transition for smooth animation */
+            transition: max-height, padding-top 0.2s ease;
         }
 
         /* Show when the corresponding item is clicked */
@@ -371,16 +372,47 @@
                         <div class="author-image">
                             <img src="assets/images/author-01.png" alt="Author 1">
                         </div>
-                        <div class="text-button-pay">
-                            <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+                        <div class="text-button-details">
+                            <p> Details <i class="fa fa-angle-double-right"></i></p>
                         </div>
                     </div>
                     <div class="hidden-details">
-                        <p>These are details about Course #3! These are details about Course #3!These are details about
-                            Course #3!These are details about Course #3!These are details about Course #3!These are
-                            details about Course #3!These are details about Course #3!These are details about Course
-                            #3!These are details about Course #3!These are details about Course #3!These are details
-                            about Course #3!These are details about Course #3!</p>
+                        <p>The concept of an IT entry-level position may not be applicable in the traditional sense. At
+                            this age, the focus
+                            should be on introducing children to basic computer literacy and technology concepts in a
+                            fun and engaging manner.
+                            Some suitable activities and learning experiences for a kid to explore the world of IT
+                            include:
+                        </p>
+                        <ol type="1">
+                            <li>
+                                Basic Computer Skills: Teach them how to use a computer, navigate the desktop, open
+                                applications, and use a
+                                keyboard and mouse.
+                            </li>
+                            <li>
+                                Internet Safety: Educate them about online safety, responsible internet use, and the
+                                potential risks
+                                associated with sharing personal information online.
+                            </li>
+                            <li>Coding Games: Introduce them to coding through games and interactive platforms like
+                                Scratch, Code.org, or
+                                Tynker, where they can create simple animations and games.
+                            </li>
+                            <li>Computer Hardware: Show them the components of a computer, such as the CPU, monitor,
+                                keyboard, and mouse, and
+                                explain their functions.
+                            </li>
+                            <li>Digital Art: Introduce them to creative tools like Paint or other kid-friendly digital
+                                art platforms to spark
+                                their creativity.
+                            </li>
+                            <li>Educational Apps: Encourage them to explore educational apps and interactive content
+                                that promote learning in
+                                various subjects.
+                            </li>
+                            and many more
+                        </ol>
                     </div>
                 </div>
                 <div class="item" id="course-2">
@@ -584,7 +616,7 @@
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/functions.js"></script>
 <script>
-    //according to loftblog tut
+
     $('.nav li:first').addClass('active');
 
     var showSection = function showSection(section, isAnimate) {
@@ -637,7 +669,7 @@
     // JavaScript to toggle the hidden details section
     document.addEventListener("DOMContentLoaded", function () {
         const items = document.querySelectorAll(".item");
-
+        console.log(items)
         items.forEach(function (item) {
             item.addEventListener("click", function () {
                 // Toggle the "active" class to smoothly show/hide the details
