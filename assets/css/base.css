@@ -1,12 +1,3 @@
-@import url(fontawesome.css);
-@import url("<link href="
-
-https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900
-" rel="
-stylesheet
-">"
-)
-;
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -389,6 +380,7 @@ section.features .col-4 {
     padding-right: 0px;
 }
 
+
 .features-post {
     position: relative;
     margin-bottom: 0px;
@@ -642,189 +634,81 @@ section.why-us {
 
 /* Coming Soon */
 
-section.coming-soon {
-    background-image: url(../images/coming-soon-bg_2.jpg);
-
+section.steps {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bebas Neue', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
+    color: white;
     padding: 120px 0px;
 }
 
-section.coming-soon .continer .counter div {
-    display: inline-block;
-}
 
-section.coming-soon .continer h4 {
-    margin-top: 100px;
-    font-size: 30px;
-    color: #fff;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    line-height: 40px;
-    margin-bottom: 50px;
-}
-
-section.coming-soon .continer h4 em {
-    font-style: normal;
-    color: #f5a425;
-}
-
-@media screen and (max-width: 767px) {
-
-    section.coming-soon .continer h4 {
-        text-align: center;
-    }
-
-}
-
-section.coming-soon .continer .counter .days,
-section.coming-soon .continer .counter .hours,
-section.coming-soon .continer .counter .minutes,
-section.coming-soon .continer .counter .seconds {
-    width: 22%;
-    height: 140px;
-    float: left;
+section.steps .connections-head h1{
     text-align: center;
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: #fff;
-    background-color: rgba(250, 250, 250, 0.1);
+    font-size: 90px;
+    margin-bottom: 100px;
 }
 
-@media screen and (max-width: 992px) {
+.connections-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    section.coming-soon .continer .counter .days,
-    section.coming-soon .continer .counter .hours,
-    section.coming-soon .continer .counter .minutes,
-    section.coming-soon .continer .counter .seconds {
-        font-size: 26px;
+.connections-step {
+    box-shadow: 19px 13px 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 15px;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+
+}
+
+.connections-step .step-top {
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+
+}
+
+.connections-step .step-top .step-left {
+    font-size: 100px;
+    width: 60px;
+    margin-right: 5px;
+}
+
+.connections-step .step-top .step-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+.connections-step .step-content p{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+@media (max-width: 993px) {
+    .connections-row {
+        flex-direction: column !important;
     }
 
-    section.coming-soon .continer .counter .days .value,
-    section.coming-soon .continer .counter .hours .value,
-    section.coming-soon .continer .counter .minutes .value,
-    section.coming-soon .continer .counter .seconds .value {
-        margin-top: 40px !important;
+
+    .connections-step {
+        margin-bottom: 20px;
     }
-
-    section.coming-soon .continer .counter span {
-        font-size: 14px !important;
     }
-
-}
-
-section.coming-soon .continer .counter .days,
-section.coming-soon .continer .counter .hours,
-section.coming-soon .continer .counter .minutes {
-    margin-right: 4%;
-}
-
-section.coming-soon .continer .counter .days .value,
-section.coming-soon .continer .counter .hours .value,
-section.coming-soon .continer .counter .minutes .value,
-section.coming-soon .continer .counter .seconds .value {
-    margin-top: 15px;
-    display: block;
-    width: 100%;
-}
-
-section.coming-soon .continer .counter span {
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #f5a425;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-top: 0px;
-    display: block;
-}
-
-section.coming-soon .right-content {
-    margin-left: 30px;
-}
-
-@media screen and (max-width: 767px) {
-
-    section.coming-soon .right-content {
-        margin-top: 60px;
-        margin-left: 0px;
-    }
-
-}
-
-section.coming-soon .top-content {
-    margin-bottom: -8px;
-}
-
-section.coming-soon .top-content h6 {
-    font-size: 14px;
-    color: #fff;
-    background-color: rgba(250, 250, 250, 0.2);
-    padding: 40px;
-    text-align: center;
-    line-height: 24px;
-}
-
-section.coming-soon .top-content h6 em {
-    font-style: normal;
-    font-weight: 600;
-}
-
-section.coming-soon form {
-    background-color: rgba(250, 250, 250, 0.1);
-    padding: 60px 40px;
-    width: 100%;
-    text-align: center;
-}
-
-section.coming-soon form input {
-    width: 100%;
-    height: 40px;
-    background-color: rgba(250, 250, 250, 0.1);
-    border-radius: 0px;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 13px;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
-
-section.coming-soon form input:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
-    color: #fff;
-    background-color: rgba(250, 250, 250, 0.1);
-}
-
-section.coming-soon form::placeholder {
-    color: #fff
-}
-
-section.coming-soon form input::placeholder {
-    color: #fff;
-}
-
-section.coming-soon form input::placeholder {
-    color: #fff;
-}
-
-section.coming-soon form button {
-    margin-top: 10px;
-    background-color: #f5a425;
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    padding: 12px 20px;
-    display: inline-block;
-    outline: none;
-    box-shadow: none;
-    border: none;
-}
 
 
 /* Courses */
@@ -1699,15 +1583,15 @@ footer p a:hover {
 .hidden-details {
     max-height: 0;
     overflow: auto;
-    font-size: 20px;
+    font-size: 15px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
-    padding: 2px;
     margin-top: 10px;
     transition: max-height, padding-top 0.2s ease;
 }
-
 /* Show when the corresponding item is clicked */
 .item.active .hidden-details {
     padding: 10px;
