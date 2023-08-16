@@ -1714,3 +1714,30 @@ footer p a:hover {
     max-height: 500px; /* Set the max height to a larger value to allow smooth expansion */
 
 }
+
+.connections-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connections-step {
+    background-color: red;
+    padding: 10px;
+    margin-left: 20px;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 993px) {
+    .connections-row {
+        flex-direction: column !important;
+    }
+
+
+    .connections-step {
+        margin-bottom: 20px;
+    }
+    }
