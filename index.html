@@ -2,28 +2,6 @@
 <html lang="en">
 
 <head>
-    <style>
-        .hidden-details {
-            max-height: 0;
-            overflow: auto;
-            font-size: 20px;
-            background-color: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 5px;
-            padding: 2px;
-            margin-top: 10px;
-            transition: max-height, padding-top 0.2s ease;
-        }
-
-        /* Show when the corresponding item is clicked */
-        .item.active .hidden-details {
-            padding: 10px;
-            max-height: 500px; /* Set the max height to a larger value to allow smooth expansion */
-
-        }
-
-
-    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QMJMV5J8Q"></script>
     <script>
@@ -43,7 +21,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
           rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Learn with Rustam</title>
     <link rel="icon" type="image/x-icon" href="assets/images/title_icon.png">
     <script src="https://cmp.osano.com/16BPk6TlifVHV5L2X/5defa75c-d04e-4e1e-a96d-08e608b5f659/osano.js"></script>
@@ -53,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+
 
 </head>
 
@@ -77,15 +56,14 @@
                         LinkedIn</a></li>
                 </ul>
             </li>
-            <li><a href="#read_more">Courses</a></li>
+            <li><a href="#read-more">Courses</a></li>
             <!-- <li><a href="#section5">Video</a></li> -->
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- ***** Main Banner Area Start ***** -->
-<section class="section main-banner" id="top" data-section="home">
+<section class="main-banner" id="top" data-section="home">
     <video autoplay muted loop id="bg-video">
         <source src="assets/images/course_video_1.mp4" type="video/mp4"/>
     </video>
@@ -100,10 +78,8 @@
         </div>
     </div>
 </section>
-<!-- ***** Main Banner Area End ***** -->
 
-
-<section class="features">
+<section class="section features">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-12">
@@ -154,7 +130,7 @@
                                 It will be a warm atmosphere with full of fun, typing fingers and snacks :)
 
                             </p>
-                            <div class="scroll-to-section"><a href="#read_more">Read More</a></div>
+                            <div class="scroll-to-section"><a href="#read-more">Read More</a></div>
                         </div>
                     </div>
                 </div>
@@ -283,94 +259,45 @@
     </div>
 </section>
 
-<section class="section coming-soon" data-section="whatido">
-    <div class="container">
-        <div class="connections-row">
-            <div class="connections-step">
-                <p> Step 1</p>
-            </div>
-            <div class="connections-step">
-                <p> Step 1</p>
-            </div>
-            <div class="connections-step">
-                <p> Step 1</p>
-            </div>
-
-        </div>
+<section class="section steps" data-section="whatido">
+    <div class="connections-head">
+        <h1> Enjoy the <span style="color: #f5a425;"> Virtual </span> class</h1>
     </div>
-</section>
-<section class="section coming-soon" data-section="whatido">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 col-xs-12">
-                <div class="continer centerIt">
-                    <div>
-                        <h4>Take <em>any online course</em> and win $326 for your next class</h4>
-                        <div class="counter">
-
-                            <div class="days">
-                                <div class="value">00</div>
-                                <span>Days</span>
-                            </div>
-
-                            <div class="hours">
-                                <div class="value">00</div>
-                                <span>Hours</span>
-                            </div>
-
-                            <div class="minutes">
-                                <div class="value">00</div>
-                                <span>Minutes</span>
-                            </div>
-
-                            <div class="seconds">
-                                <div class="value">00</div>
-                                <span>Seconds</span>
-                            </div>
-
-                        </div>
-                    </div>
+    <div class="connections-row">
+        <div class="connections-step">
+            <div class="step-top">
+                <div class="step-left">
+                    1
                 </div>
+                <div class="step-right"> Sign-in</div>
             </div>
-            <div class="col-md-5">
-                <div class="right-content">
-                    <div class="top-content">
-                        <h6>Register your free account and <em>get immediate</em> access to online courses</h6>
-                    </div>
-                    <form id="!contact" action="" method="get">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input name="name" type="text" class="form-control" id="!name"
-                                           placeholder="Your Name" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input name="email" type="text" class="form-control" id="!email"
-                                           placeholder="Your Email" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <input name="phone-number" type="text" class="form-control" id="phone-number"
-                                           placeholder="Your Phone Number" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-md-12">
-                                <fieldset>
-                                    <button type="submit" id="!form-submit" class="button">Get it now</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <div class="step-content"><p> Open an account in Slack </p></div>
         </div>
+
+        <div class="connections-step">
+            <div class="step-top">
+                <div class="step-left">
+                    2
+                </div>
+                <div class="step-right"> Join</div>
+            </div>
+            <div class="step-content"><p> Open an account in Slack </p></div>
+        </div>
+
+        <div class="connections-step">
+            <div class="step-top">
+                <div class="step-left">
+                    3
+                </div>
+                <div class="step-right"> Concentrate</div>
+            </div>
+            <div class="step-content"><p> Open an account in Slack </p></div>
+        </div>
+
     </div>
 </section>
 
-<section class="section courses" data-section="read_more">
+<section class="section courses" data-section="read-more">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -383,49 +310,47 @@
                     <img src="assets/images/courses-thumbnails/cit_base.jpg" alt="Course #1">
                     <div class="down-content">
                         <h4>Core IT - Entry</h4>
-                        <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and
-                            Pexels.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-01.png" alt="Author 1">
-                        </div>
+                        <p>If you want to fall into the world of technologies, this course is for you</p>
                     </div>
                     <div class="hidden-details">
-                        <p>The concept of an IT entry-level position may not be applicable in the traditional sense. At
-                            this age, the focus
-                            should be on introducing children to basic computer literacy and technology concepts in a
-                            fun and engaging manner.
-                            Some suitable activities and learning experiences for a kid to explore the world of IT
-                            include:
-                        </p>
+                        The concept of an IT entry-level position may not be applicable in the traditional sense. At
+                        this age, the focus
+                        should be on
+                        <mark> introducing children to basic computer literacy and technology concepts</mark>
+                        in a
+                        fun and engaging manner.
+                        Some suitable activities and learning experiences for a kid to explore the world of IT
+                        include:
                         <ol type="1">
                             <li>
-                                Basic Computer Skills: Teach them how to use a computer, navigate the desktop, open
-                                applications, and use a
-                                keyboard and mouse.
+                                Basic Computer Skills: I will teach how to use a computer, navigate the desktop, open
+                                applications, use a keyboard, mouse and so on.
                             </li>
                             <li>
-                                Internet Safety: Educate them about online safety, responsible internet use, and the
-                                potential risks
-                                associated with sharing personal information online.
+                                Internet Safety: I will educate about
+                                <mark> online safety</mark>
+                                , responsible internet use, and the
+                                potential risks associated with sharing personal information online.
                             </li>
-                            <li>Coding Games: Introduce them to coding through games and interactive platforms like
-                                Scratch, Code.org, or
-                                Tynker, where they can create simple animations and games.
+                            <li>Coding Games: Introduce you <mark> coding </mark> through games and interactive platforms like
+                                Scratch, Code.org, or Tynker, where you can create simple animations and games.
                             </li>
-                            <li>Computer Hardware: Show them the components of a computer, such as the CPU, monitor,
-                                keyboard, and mouse, and
-                                explain their functions.
+                            <li>Computer Hardware: I will show the components of a computer, such as the CPU, monitor,
+                                keyboard, and mouse, and explain their functions.
                             </li>
-                            <li>Digital Art: Introduce them to creative tools like Paint or other kid-friendly digital
-                                art platforms to spark
-                                their creativity.
+                            <li>Digital Art: Introduction to
+                                <mark> creative tools</mark>
+                                like Paint or other kid-friendly digital
+                                art platforms to spark your creativity.
                             </li>
-                            <li>Educational Apps: Encourage them to explore educational apps and interactive content
-                                that promote learning in
-                                various subjects.
+                            <li>Educational Apps: Encourage you to explore
+                                <mark> educational</mark>
+                                apps and interactive content
+                                that promote learning in various subjects.
                             </li>
-                            and many more
+                            ...and <mark> many more</mark>
                         </ol>
+                        <button onclick="auto_fill('Core IT - Entry')"> Sign</button>
                     </div>
                 </div>
                 <div class="item" id="course-2">
@@ -434,9 +359,6 @@
                         <h4>Core IT - Intermediate</h4>
                         <p>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum
                             porta.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-01.png" alt="Author 2">
-                        </div>
                     </div>
                     <div class="hidden-details">
                         <p>These are details about Course #3! These are details about Course #3!These are details about
@@ -452,9 +374,6 @@
                         <h4>Python - Entry</h4>
                         <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
                             lobortis enim.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-01.png" alt="Author 3">
-                        </div>
                     </div>
                     <div class="hidden-details">
                         <p>These are details about Course #3! These are details about Course #3!These are details about
@@ -470,9 +389,6 @@
                         <h4>Python - Intermediate</h4>
                         <p>Download free images and videos for your websites by visiting Unsplash, Pixabay, and
                             Pexels.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-01.png" alt="Author 4">
-                        </div>
                     </div>
 
                     <div class="hidden-details">
@@ -489,9 +405,6 @@
                         <h4>Python - Advanced</h4>
                         <p>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus
                             lobortis enim.</p>
-                        <div class="author-image">
-                            <img src="assets/images/author-01.png" alt="">
-                        </div>
                     </div>
                     <div class="hidden-details">
                         <img src="assets/images/python_logo.png">
@@ -680,6 +593,7 @@
 
         // Hide the details section when clicking outside the item or the hidden details itself
         document.addEventListener("click", function (event) {
+
             if (!event.target.closest(".item")) {
                 items.forEach(function (item) {
                     item.classList.remove("active");
