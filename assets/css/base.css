@@ -659,18 +659,18 @@ section.steps .connections-head h1{
 }
 
 .connections-step {
+    position: relative;
     box-shadow: 19px 13px 10px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     padding: 10px;
     margin-left: 15px;
-    width: 500px;
+    width: 80vw;
     height: 300px;
     border-radius: 10px;
     box-sizing: border-box;
-
-
 }
+
 
 .connections-step .step-top {
     display: flex;
