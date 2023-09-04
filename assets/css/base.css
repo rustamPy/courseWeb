@@ -163,13 +163,14 @@ a.menu-link {
 }
 
 .main-header {
-    background-color: rgba(22, 34, 57, 0.95);
+    background-color: #162239F2;
     height: 80px;
     position: fixed;
     z-index: 12;
     width: 100%;
     top: 0;
 }
+
 
 .main-header .logo {
     float: left;
@@ -183,6 +184,14 @@ a.menu-link {
     font-weight: 800;
     color: #fff;
 }
+
+.main-header.light {
+    background-color: #d0e3ff;
+}
+.main-header.light .logo a {
+    color: #162239F2;
+}
+
 
 .main-header .logo span {
     font-style: normal;
@@ -214,6 +223,11 @@ a.menu-link {
     color: #fff;
     border: 2px solid transparent;
     transition: all 0.5s;
+}
+
+
+.main-menu.light li a  {
+    color: #162239F2;
 }
 
 .main-menu li.has-submenu a:after {
@@ -1590,4 +1604,13 @@ footer p a:hover {
     padding: 10px;
     max-height: 500px; /* Set the max height to a larger value to allow smooth expansion */
 
+}
+
+
+/* COURSES */
+
+.content {
+    margin-top: 90px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
