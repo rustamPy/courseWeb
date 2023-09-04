@@ -188,6 +188,7 @@ a.menu-link {
 .main-header.light {
     background-color: #d0e3ff;
 }
+
 .main-header.light .logo a {
     color: #162239F2;
 }
@@ -226,7 +227,7 @@ a.menu-link {
 }
 
 
-.main-menu.light li a  {
+.main-menu.light li a {
     color: #162239F2;
 }
 
@@ -657,7 +658,7 @@ section.steps {
 }
 
 
-section.steps .connections-head h1{
+section.steps .connections-head h1 {
     text-align: center;
     font-size: 90px;
     margin-bottom: 100px;
@@ -703,12 +704,11 @@ section.steps .connections-head h1{
     align-items: center;
     font-size: 70px;
 }
-.connections-step .step-content p{
+
+.connections-step .step-content p {
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
-
-
 
 
 @media (max-width: 993px) {
@@ -720,7 +720,7 @@ section.steps .connections-head h1{
     .connections-step {
         margin-bottom: 20px;
     }
-    }
+}
 
 
 /* Courses */
@@ -1606,6 +1606,7 @@ footer p a:hover {
     margin-top: 10px;
     transition: max-height, padding-top 0.2s ease;
 }
+
 /* Show when the corresponding item is clicked */
 .item.active .hidden-details {
     padding: 10px;
@@ -1620,4 +1621,49 @@ footer p a:hover {
     margin-top: 90px;
     margin-left: 20px;
     margin-right: 20px;
+}
+.content h1 {
+    text-align: center;
+}
+
+.content a {
+    color: #000000;
+    font-size: 30px;
+}
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-lqy6 {
+    text-align: right;
+    vertical-align: top
+}
+
+.tg .tg-0lax {
+    text-align: left;
+    vertical-align: top
 }
