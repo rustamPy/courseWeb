@@ -492,10 +492,7 @@ section.features .col-4 {
 /* Why Choosing Us */
 
 section.why-us {
-    background-image: url(../images/choosing-bg.jpg);
-    background-color: #172238;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom, #172238, #000000);
     padding-bottom: 100px;
 }
 
@@ -640,7 +637,7 @@ section.steps {
     font-family: 'Bebas Neue', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #172238;
+    background-image: url(../images/matrix.gif);
     color: white;
     padding: 120px 0px;
 }
@@ -660,6 +657,7 @@ section.steps .connections-head h1{
 
 .connections-step {
     position: relative;
+    background-color: rgb(0 0 0 / 75%);
     box-shadow: 19px 13px 10px 0 rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -714,11 +712,7 @@ section.steps .connections-head h1{
 /* Courses */
 
 section.courses {
-    background-image: url(../images/choosing-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #172238;
-    padding-bottom: 100px;
+    background: linear-gradient(to bottom, #000000, #172238);
     padding: 0px 30px 100px 30px;
 }
 
@@ -803,7 +797,6 @@ section.courses .owl-carousel button.active {
 /* Video */
 
 section.video {
-    background-image: url(../images/video-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #172238;
