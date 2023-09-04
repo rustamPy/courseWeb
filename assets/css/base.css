@@ -1531,16 +1531,10 @@ footer p a:hover {
 
     .main-menu li {
         display: block;
-        line-height: 1;
         margin-left: 0 !important;
 
     }
 
-    .main-menu.light li {
-        display: block;
-        line-height: 5;
-        margin-left: 0 !important;
-    }
 
     .main-menu li .sub-menu {
         opacity: 1;
