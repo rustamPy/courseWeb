@@ -1621,13 +1621,6 @@ footer p a:hover {
     font-size: 15px;
 }
 
-@media screen and (max-width: 500px)
-{
-.content p, ol {
-    font-size: 14px;
-}
-}
-
 
 .content h1 {
     text-align: center;
@@ -1641,6 +1634,19 @@ footer p a:hover {
 .content img {
     width: 450px;
 }
+
+
+@media screen and (max-width: 500px) {
+    .content p, ol {
+        font-size: 14px;
+    }
+
+    .content img{
+        width: 100%;
+    }
+}
+
+
 .tg {
     border-collapse: collapse;
     border-spacing: 0;
