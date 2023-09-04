@@ -1621,6 +1621,14 @@ footer p a:hover {
     font-size: 15px;
 }
 
+@media screen and (max-width: 500px)
+{
+.content p, ol {
+    font-size: 12px;
+}
+}
+
+
 .content h1 {
     text-align: center;
 }
