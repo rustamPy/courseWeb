@@ -298,17 +298,6 @@ a.menu-link {
     border: 2px solid #f5a425;
 }
 
-@media (max-width: 950px) {
-    .main-nav li:hover a,
-    .main-nav li.active a {
-        /*border: 2px solid transparent;
-        border-bottom: 1px solid rgba(250,250,250,0.25);*/
-    }
-}
-
-
-/* Slider */
-
 .main-banner {
     position: relative;
     max-height: 100%;
@@ -394,47 +383,6 @@ a.menu-link {
 }
 
 
-/* Features */
-
-section.features .col-4 {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-
-.features-thumb img {
-    width: 100%;
-}
-
-.features-content h4 {
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 1px;
-    margin-bottom: 0;
-}
-
-.features-content h4 i {
-    margin-right: 15px;
-    font-size: 24px;
-}
-
-.features-content p {
-    margin-bottom: 0;
-}
-
-.features-content a {
-    margin-top: 15px;
-    display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    font-size: 14px;
-    border-bottom: 2px solid #fff;
-}
-
 .content-hide {
     margin-top: 15px;
     display: none;
@@ -466,9 +414,6 @@ section.features .col-4 {
     }
 
 }
-
-
-/* Why Choosing Us */
 
 section.why-us {
     background: linear-gradient(to bottom, #172238, #000000);
@@ -607,9 +552,6 @@ section.why-us {
 
 }
 
-
-/* Coming Soon */
-
 section.steps {
     display: flex;
     flex-direction: column;
@@ -687,9 +629,6 @@ section.steps .connections-head h1 {
     }
 }
 
-
-/* Courses */
-
 section.courses {
     background: linear-gradient(to bottom, #000000, #172238);
     padding: 0 30px 100px 30px;
@@ -743,12 +682,6 @@ section.courses .item .down-content .text-button-free a {
 section.courses .owl-carousel button.active {
     background-color: #f5a425;
 }
-
-
-/* Main image in popup */
-
-/* The shadow behind the image */
-
 .mfp-figure small {
     color: #BDBDBD;
     display: block;
@@ -761,17 +694,10 @@ section.courses .owl-carousel button.active {
 }
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-    /**
-         * Remove all paddings around the image on small screen
-         */
     .mfp-img-mobile .mfp-figure small {
         display: inline;
         margin-left: 5px;
     }
-
-}
-
-@media all and (max-width: 900px) {
 
 }
 
@@ -909,10 +835,6 @@ footer p a:hover {
     color: #f5a425;
 }
 
-@media screen and (max-width: 992px) {
-
-}
-
 @media screen and (max-width: 950px) {
     .main-menu {
         padding-right: 0 !important;
@@ -940,9 +862,6 @@ footer p a:hover {
         width: 100%;
     }
 
-    .main-menu li .sub-menu li:last-child {
-        /*border-bottom: 1px solid rgba(250,250,250,0.25);*/
-    }
 }
 
 @media screen and (max-width: 950px) and (max-height: 400px) {
@@ -982,8 +901,6 @@ footer p a:hover {
 .tabs-content img {
     margin-bottom: 20px;
 }
-
-/* Show when the corresponding item is clicked */
 
 
 /* COURSES */
