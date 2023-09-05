@@ -9,6 +9,16 @@ a {
     text-decoration: none;
 }
 
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+}
+
 a:hover {
     color: #FC3;
     text-decoration: none;

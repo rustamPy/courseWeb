@@ -35,13 +35,5 @@ function telegramIt() {
         });
 }
 
-const auto_fill = courseName => {
-    const pointer = document.getElementById('message');
-    pointer.value = `I would like to sign for ${courseName}`;
-    pointer.scrollIntoView({behavior: 'smooth'});
-
-}
-
-
 
 
