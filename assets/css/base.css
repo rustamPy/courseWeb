@@ -1383,9 +1383,6 @@ img.mfp-img {
 /* Contact */
 
 section.contact {
-    background-image: url(../images/contact-bg_2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: #172238;
     padding-bottom: 120px;
 }
