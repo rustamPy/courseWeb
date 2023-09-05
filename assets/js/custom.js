@@ -40,9 +40,6 @@
     })
 
 
-
-
-
     $("div.features-post").hover(
         function () {
             $(this).find("div.content-hide").slideToggle("medium");
