@@ -32,6 +32,13 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
+    <script src="https://kit.fontawesome.com/22a7cc9034.js" crossorigin="anonymous"></script>
+
+    <meta property="og:title" content="Learn with Rustam">
+    <meta property="og:description" content="Carefully selected IT courses for students">
+    <meta property="og:image" content="https://i.pinimg.com/564x/6e/05/41/6e05411d3ec2ebaa4974d99debcdd71f.jpg">
+    <meta property="og:url" content="https://learnwithrustam.com">
+
 
 </head>
 
@@ -51,7 +58,6 @@
                 <ul class="sub-menu">
                     <li><a href="#whoami">Who I am?</a></li>
                     <li><a href="#whatido">What I do?</a></li>
-                    <li><a href="#whatido">How it works?</a></li>
                     <li><a href="https://www.linkedin.com/in/rustam-karimov-7293315b/" target="_blank" class="external">My
                         LinkedIn</a></li>
                 </ul>
@@ -89,7 +95,7 @@
                             <h4><i class="fa fa-pencil"></i>All Courses</h4>
                         </div>
                         <div class="content-hide">
-                            <p> My IT courses are made to provide young students (10+) with an enjoyable and engaging
+                            <p> My IT courses are made to provide young students (8+) with an enjoyable and engaging
                                 introduction to the core ideas and abilities associated with computers and information
                                 technology. From an early age, these courses seek to foster students' computational
                                 thinking, problem-solving skills, and digital literacy. The courses also include
@@ -107,11 +113,11 @@
                             <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Classes are entirely online at Microsoft Teams. To connect, you will need to have a valid
-                                Microsoft account, and access to appropriate Teams class. During a 40-60 minutes of
-                                class,
-                                stay focused and follow my instructions for full effects. At the end of each lesson,
-                                there will be assigned homeworks, completion of which is strictly required.</p>
+                            <p>Classes are conducted exclusively through Slack's online platform. To participate, you
+                                must have a valid Slack account and access to the relevant channel. It's crucial to
+                                maintain concentration and adhere to my guidance throughout the 40-60 minute class to
+                                maximize the benefits. At the conclusion of each lesson, assignments will be given, and
+                                it is mandatory to complete them.</p>
                             <div class="scroll-to-section"><a href="#whatido">Details</a></div>
                         </div>
                     </div>
@@ -124,11 +130,10 @@
                             <h4><i class="fa fa-book"></i>Yearly Competition</h4>
                         </div>
                         <div class="content-hide">
-                            <p> Students, each year I will organize a coding competition (physically; on-side)
-                                among all of you who believes in his/her coding ability and interested to spend a great
-                                time together.
-                                It will be a warm atmosphere with full of fun, typing fingers and snacks :)
-
+                            <p> Annually, I will arrange a physical coding competition for those of you who have
+                                confidence in coding skills and are enthusiastic about enjoying spending the time
+                                together. The event will have a friendly and welcoming ambiance, filled with fun, active
+                                coding, and tasty snacks :)
                             </p>
                             <div class="scroll-to-section"><a href="#read-more">Read More</a></div>
                         </div>
@@ -374,37 +379,6 @@
     </div>
 </section>
 
-<section class="section video" data-section="section5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 align-self-center">
-                <div class="left-content">
-                    <span>our presentation is for you</span>
-                    <h4>Watch the video to learn more <em>about Grad School</em></h4>
-                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website.
-                        However, you can use this template to convert into a specific theme for any kind of CMS platform
-                        such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact"
-                                                      target="_parent">contact TemplateMo</a> for details.
-                        <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum
-                        quam felis non ante.</p>
-                    <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External
-                        URL</a></div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <article class="video-item">
-                    <div class="video-caption">
-                        <h4>Power HTML Template</h4>
-                    </div>
-                    <figure>
-                        <a href="https://www.youtube.com/watch?v=r9LtOG6pNUw" class="play"><img
-                                src="assets/images/main-thumb.png"></a>
-                    </figure>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="section contact" data-section="contact">
     <div class="container">
@@ -433,8 +407,21 @@
                         </div>
 
                         <div class="col-md-6">
+
                             <input name="email" type="email" class="form-control" id="email"
                                    placeholder="Email" required>
+                        </div>
+
+
+                        <div class="col-md-6" style="margin-top: -24px;">
+                            <label for="course" style="color: white; margin-bottom: -10px;">Select a course:</label>
+                            <select id="course" name="course">
+                                <option value="cit-entry">Core IT - Entry</option>
+                                <option value="cit-inter">Core IT - Intermediate</option>
+                                <option value="python-entry">Python - Entry</option>
+                                <option value="python-inter">Python - Intermediate</option>
+                                <option value="python-advanced">Python - Advanced</option>
+                            </select>
                         </div>
 
                         <div class="col-md-6">
@@ -452,7 +439,8 @@
                     </div>
                 </form>
                 <div id="thankYouMessage" style="display: none;">
-                    Thank you for your message!
+                    Your message is sent.<br>
+                    Thank you!
                 </div>
             </div>
         </div>
@@ -471,7 +459,6 @@
 </footer>
 
 <!-- Scripts -->
-<!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
