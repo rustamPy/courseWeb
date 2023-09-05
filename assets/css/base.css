@@ -247,7 +247,8 @@ a.menu-link {
 .row {
     display: flex;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
+    align-items: center;
 }
 
 .main-menu li:hover .sub-menu {
