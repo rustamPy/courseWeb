@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 /* Basic */
@@ -236,6 +236,8 @@ a.menu-link {
     font-family: "FontAwesome";
     margin-left: 5px;
 }
+
+
 
 .main-menu li.has-submenu ul li a:after {
     display: none;
@@ -682,6 +684,7 @@ section.courses .item .down-content .text-button-free a {
 section.courses .owl-carousel button.active {
     background-color: #f5a425;
 }
+
 .mfp-figure small {
     color: #BDBDBD;
     display: block;
@@ -703,7 +706,6 @@ section.courses .owl-carousel button.active {
 
 
 /* Contact */
-
 section.contact {
     background-color: #172238;
     padding-bottom: 120px;
@@ -814,7 +816,6 @@ section.contact form button {
 }
 
 /* Footer */
-
 footer {
     background-color: #152036;
     text-align: center;
@@ -864,6 +865,20 @@ footer p a:hover {
 
 }
 
+[class^="col-md-"] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+
 @media screen and (max-width: 950px) and (max-height: 400px) {
     nav[role="navigation"].active {
         max-height: calc(80px + 100vh);
@@ -904,7 +919,6 @@ footer p a:hover {
 
 
 /* COURSES */
-
 .content {
     margin-top: 90px;
     margin-left: 20px;
