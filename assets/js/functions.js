@@ -9,13 +9,13 @@ function telegramIt() {
 
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
-    const age = document.getElementById("age").value;
-    const email = document.getElementById("email").value;
-    const telegram_acc = document.getElementById("telegram_acc").value;
-    const course = document.getElementById("course").value;
-    const message = document.getElementById("message").value;
-    const text = `Name: ${name}\nSurname: ${surname}\nAge: ${age}\nEmail: ${email}\nTelegram Account: ${telegram_acc}\nCourse: ${course}\nMessage: ${message}`;
-
+    //const age = document.getElementById("age").value;
+    //const email = document.getElementById("email").value;
+    //const telegram_acc = document.getElementById("telegram_acc").value;
+    const int = document.getElementById("interest").value;
+    //const message = document.getElementById("message").value;
+    //const text = `Name: ${name}\nSurname: ${surname}\nAge: ${age}\nEmail: ${email}\nTelegram Account: ${telegram_acc}\nCourse: ${course}\nMessage: ${message}`;
+    const text = `Name: ${name}\nSurname: ${surname}\nInterested: ${int}`
     fetch(`https://api.telegram.org/bot${t}/sendMessage?chat_id=@learnwithrustamnow&text=${encodeURIComponent(text)}`)
         .then(response => {
             if (!response.ok) {
