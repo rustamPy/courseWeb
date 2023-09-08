@@ -230,7 +230,6 @@ a.menu-link {
 }
 
 
-
 .main-menu li.has-submenu ul li a:after {
     display: none;
 }
@@ -940,16 +939,63 @@ footer p a:hover {
     columns: 2;
 }
 
+{
+.content p, ol {
+    font-size: 14px;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content .content-info {
+    columns: 1;
+}
+
+}
+
+
+/* Why us portal */
+.test_1 {
+    display: flex;
+    color: white;
+    place-content: space-evenly;
+    margin-top: 90px;
+}
+
+.test_1 p {
+    margin-left: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+
+.test_1 p {
+    margin-left: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+section.tabs-content > article:not(:first-child) {
+    display: none;
+}
+
+section.tabs-content article {
+    color: white;
+}
+
+.active-tab {
+    color: #f5a425;
+}
+
+
+
 @media screen and (max-width: 500px) {
-    .content p, ol {
-        font-size: 14px;
+
+    .test_1 {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .content img {
-        width: 100%;
-    }
-
-    .content .content-info {
-        columns: 1;
-    }
 }
