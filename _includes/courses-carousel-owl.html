@@ -1,0 +1,13 @@
+{%- if site.courses.size > 0 -%}
+{%- for course in site.courses -%}
+{%- assign style_html = "course-card"%}
+
+{%- assign course_title = {{course.title}} | escape -%}
+{%- assign course_image = {{course.image}} | escape -%}
+{%- assign course_desc = {{course.description}} | escape -%}
+{%- assign duration = {{course.duration}} | escape -%}
+{%- assign complexity = {{course.complexity}} | escape -%}
+
+{%- include {{style_html}}.html -%}
+{%- endfor -%}
+{%- endif -%}

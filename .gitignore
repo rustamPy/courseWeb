@@ -1,24 +1,5 @@
-# Ignore environment variables file
-.env
-
-# Ignore node_modules folder
-node_modules/
-
-# Ignore generated files and build artifacts
-build/
-dist/
-*.js
-*.map
-
-# Ignore IDE/Editor-specific files
-.vscode/
-.idea/
-.junk/
-.DS_Store
-
-# Jekyll stuff
-articles/_site
-articles/.sass-cache
-articles/.jekyll-cache
-articles/.jekyll-metadata
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
 vendor

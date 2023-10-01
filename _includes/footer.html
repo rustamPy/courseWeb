@@ -1,0 +1,38 @@
+<footer>
+
+    <div class="foot-container">
+
+        <span class="greyed-logo">
+        {%- include logo.html logo_size="20px" -%}
+        </span>
+        <div class="columns">
+            <div class="col-map">
+                <h3>Site Map</h3>
+                <ul>
+                    {%- for page in site.pages -%}
+                    <li><a href="{{page.url}}"> {{page.title}} </a></li>
+                    {%- endfor -%}
+                    <li><a href="/articles"> Articles </a></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="copyright">
+        <div class="col-md-12">
+            <p><i class="fa fa-copyright"></i> 2023 | Learn with Rustam
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+

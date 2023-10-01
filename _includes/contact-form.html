@@ -1,0 +1,23 @@
+<form class="form__contact" action="" id="contact">
+    <fieldset>
+        <p>Hello,</p>
+
+        <p>My name is <input id='name' type="text" class="name" placeholder="your name" required>
+            I'm <input id='age' type="number" class="age" placeholder="5" required> years old
+            and I'm writting tou you since I'm interested in
+            <select id="course" name="course">
+                {%- if site.courses.size > 0 -%}
+                {%- for course in site.courses -%}
+                <option value="{{course.title}}">{{course.title}}</option>
+                {%- endfor -%}
+                {%- endif -%}
+            </select>.</p>
+        <p>This is my <input name="email" type="email" id="email" placeholder="email address" required></p>
+        <p>Additionally, I would like to ask you few question:</p>
+        <textarea name="message" id="message" placeholder="Your message..."></textarea>
+        <br>
+        <br>
+        <p>Hope to get in touch soon. Cheers!</p>
+        <input type="button" class="button" onclick="telegramIt();" id="submit" value="Send letter">
+    </fieldset>
+</form>

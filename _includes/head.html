@@ -1,0 +1,25 @@
+<head>
+  {%- if site.google-id -%}
+  {%- include google-analytics.html -%}
+  {%- endif -%}
+  {%- seo -%}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ "assets/images/title_icon.png" | relative_url }}">
+  <script src="https://cmp.osano.com/16BPk6TlifVHV5L2X/5defa75c-d04e-4e1e-a96d-08e608b5f659/osano.js"></script>
+  <script src="assets/js/functions.js"></script>
+
+  <link rel="stylesheet" href="{{ "assets/css/bootstrap.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "assets/css/base.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "assets/css/owl.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "assets/css/form.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "assets/css/course-card-style.css" | relative_url }}">
+
+  <script src="https://kit.fontawesome.com/22a7cc9034.js" crossorigin="anonymous"></script>
+  {%- feed_meta -%}
+</head>

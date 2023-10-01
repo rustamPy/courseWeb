@@ -1,0 +1,35 @@
+---
+layout: base
+---
+
+<section class="section content">
+    <h1> {{page.title}} </h1>
+    <div style="display: flex; flex-direction: column;">
+
+        <img src="../assets/images/courses-thumbnails/{{page.image}}.png"
+             style="width: 300px; height: 300px; margin-right: 10px; align-self: center">
+        <div class="content-info">
+
+            <!-- Course Title-->
+            <h4><i class="fa-solid fa-monument"></i> Course Title:</h4>
+            <p><span style="color: red;"> {{page.title}}</span> Age: {{page.age}} </p>
+            {{content}}
+            <!-- Instructor Information -->
+            <h4><i class="fa-solid fa-person-chalkboard"></i> Instructor Information: </h4>
+            <p> {{page.author}} </p>
+        </div>
+    </div>
+    <hr>
+    <p style="text-align: center; text-transform: uppercase; font-weight: bold;"> Interested? <br>Contact me using: </p>
+    <div id="connect" style="text-align: center;">
+
+        <a href="https://api.whatsapp.com/send?phone=+48573456169&text=I'm interested in {{page.title}} course"
+           target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> </a>
+        <a href="https://t.me/CrazyNutG" target="_blank"> <i class="fa-brands fa-telegram"></i> </a>
+        <a href="mailto:kerimov.rustam@live.ru?subject=Course%20Info&body=I would like to ask questions about {{page.title}} course:"
+           target="_blank"><i
+                class="fa-solid fa-envelope"></i></a>
+    </div>
+
+</section>
