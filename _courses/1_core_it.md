@@ -1,18 +1,18 @@
 ---
 layout: course
-style_id: 1
-title:  Core IT - Intermediate
-date:   2023-09-29 09:31:45 +0200
-categories: courses
-description: This course covers a range of advanced topics and subjects to
-  build upon the foundational knowledge gained in the Entry level
-image: cit_inter
+title: Core IT - Entry
+description: This course is designed to provide kids with a solid foundation
+  in information technology (IT) concepts and practices. It serves as an
+  essential stepping stone for individuals who are new to the world of IT.
+image: cit_base
 age: 8-9
 duration: 3 months
-complexity: medium
+complexity: easy
 author: Rustam Karimov
 ---
- <!-- Course Overview -->
+
+<!-- Course Overview -->
+
 <h4><i class="fa-regular fa-eye" style="color: #000000;"></i> Course Overview: </h4>
 <p>
     The concept of an IT entry-level position may not be applicable in the traditional sense. At
