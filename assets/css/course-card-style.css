@@ -56,7 +56,7 @@
 }
 
 .course-window h2.card_title, p {
-    margin: 1.2rem 0;
+    /*margin: 1.2rem 0;*/
 }
 
 .course-window h2.card_title {
@@ -65,7 +65,8 @@
 
 .course-window .card_info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
 }
 
 .course-window .card_info p {

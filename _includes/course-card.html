@@ -1,16 +1,18 @@
 <div class="course-window">
     <div class="card">
-        <div class="card_image"><img src="/assets/images/courses-thumbnails/{{course_image | default: 'cit-base'}}.jpg"></div>
+        <div class="card_image"><img src="/assets/images/courses-thumbnails/{{course_image | default: 'cit-base'}}.jpg">
+        </div>
         <div class="card_content">
             <h2 class="card_title">{{course_title | default: ''}}</h2>
             <div class="card_text">
                 <p>
-                {{course_desc | default: ''}}
+                    {{course_desc | default: ''}}
                 </p>
             </div>
             <div class="card_info">
                 <p>Duration: <span> {{duration}} </span></p>
                 <p>Complexity: <span>{{complexity}} </span></p>
+                <a href="{{course_url}}"><i class="fa-solid fa-angles-down fa-2xl"></i></a>
             </div>
         </div>
     </div>

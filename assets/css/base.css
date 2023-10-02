@@ -23,7 +23,7 @@ body {
     font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Basic */
+/* General */
 
 a {
     color: #3CF;
@@ -202,10 +202,6 @@ a.menu-link {
     color: #fff;
 }
 
-.main-header.light .logo a {
-    color: #162239F2;
-}
-
 
 .main-header .logo span {
     font-style: normal;
@@ -239,10 +235,6 @@ a.menu-link {
     transition: all 0.5s;
 }
 
-
-.main-menu.light li a {
-    color: #162239F2;
-}
 
 .main-menu li.has-submenu a:after {
     content: '\f107';
@@ -862,11 +854,6 @@ footer p a:hover {
     }
 }
 
-.blinking-text {
-    animation: blink 1s infinite;
-    font-size: 25px;
-}
-
 @keyframes blink {
     0%, 100% {
         color: black;
@@ -885,25 +872,7 @@ footer p a:hover {
     width: 350px;
 }
 
-.preview_picture {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    margin-top: 25px;
-}
 
-.preview {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    display: none;
-}
 
 /* Why us portal */
 .test_1 {
@@ -1181,3 +1150,12 @@ object {
     }
 }
 
+/*--LOGO--*/
+.logo a span {
+    color: var(--spec-orange);
+}
+
+.logo {
+    text-transform: uppercase;
+    padding-left: 60px;
+}
