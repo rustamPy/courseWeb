@@ -1,13 +1,13 @@
 ---
 layout: course
 title: Core IT - Entry
-description: This course is designed to provide kids with a solid foundation
-  in information technology (IT) concepts and practices. It serves as an
+description: This course is designed to provide you with a solid foundation
+  in Information Technology (IT) concepts and practices. It serves as an
   essential stepping stone for individuals who are new to the world of IT.
 image: cit_base
 age: 8-9
 duration: 3 months
-complexity: easy
+complexity: basic
 author: Rustam Karimov
 ---
 

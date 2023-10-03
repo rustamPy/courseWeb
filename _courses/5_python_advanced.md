@@ -1,10 +1,10 @@
 ---
 layout: course
 title: Python - Advanced
-description: This course is designed for individuals who wish to advance further along the Python learning
-  journey and deepen their understanding of this programming language. The intermediate level
-  not only builds upon the foundational knowledge acquired in the entry-level Python course
-  but also introduces more challenging aspects of the language.
+description: This advanced Python course is the natural progression for those who have successfully
+  navigated the intermediate level and are ready to take their Python skills to new heights.
+  In this course, I delve deep into advanced Python concepts and techniques that empower you
+  to tackle complex real-world programming challenges with confidence.
 image: python_advanced
 age: 14-19
 duration: 4 months
