@@ -14,9 +14,16 @@
 
 :root {
     --spec-orange: #F6A426;
+    --spec-blue: #17233b;
+    --spec-blue-darker: #101828FF;
     --easy-color: #15da15;
     --medium-color: #cb9d4c;
     --hard-color: #e30707;
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -38,7 +45,6 @@ a:hover {
 
 
 p {
-    font-size: 13px;
     line-height: 22px;
 }
 
@@ -76,6 +82,7 @@ p {
 
 .main-button a {
     background-color: var(--spec-orange);
+    border-radius: 10px;
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
@@ -232,7 +239,6 @@ a.menu-link {
     font-weight: 700;
     color: #fff;
     border: 2px solid transparent;
-    transition: all 0.5s;
 }
 
 
@@ -423,7 +429,7 @@ a.menu-link {
 }
 
 section.why-us {
-    background: linear-gradient(to bottom, #172238, #000000);
+    background: linear-gradient(to bottom, var(--spec-blue), #000000);
     padding-bottom: 100px;
 }
 
@@ -637,7 +643,7 @@ section.steps .connections-head h1 {
 }
 
 section.courses {
-    background: linear-gradient(to bottom, #000000, #172238);
+    background: linear-gradient(to bottom, #000000, var(--spec-blue));
     padding: 0 30px 100px 30px;
 }
 
@@ -712,13 +718,13 @@ section.courses .owl-carousel button.active {
 
 /* Contact */
 section.contact {
-    background-color: #172238;
+    background-color: var(--spec-blue);
     padding-bottom: 120px;
 }
 
 /* Footer */
 footer {
-    background-color: #152036;
+    background-color: var(--spec-blue-darker);
     text-align: center;
 }
 
@@ -826,11 +832,6 @@ footer p a:hover {
     margin-right: 20px;
 }
 
-.content p, ol {
-    font-size: 15px;
-}
-
-
 .content h1 {
     text-align: center;
 }
@@ -845,12 +846,18 @@ footer p a:hover {
 }
 
 .content .content-info {
-    columns: 2;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.content .content-info h1, h2, h3, h4 {
+    text-align: center;
 }
 
 @media screen and (max-width: 500px) {
     .content .content-info {
         columns: 1;
+        padding: 0;
     }
 }
 
@@ -958,7 +965,7 @@ section.tabs-content article img {
 
 
 .hero-title {
-    background: #000000FF;
+    background: var(--spec-blue);
     border-radius: 20px;
     color: white;
     display: inline-block;
