@@ -1,14 +1,22 @@
 {%- if site.courses.size > 0 -%}
-{%- for course in site.courses -%}
-{%- assign style_html = "course-card"%}
+    {%- for course in site.courses -%}
 
-{%- assign course_title = {{course.title}} | escape -%}
-{%- assign course_image = {{course.image}} | escape -%}
-{%- assign course_desc = {{course.description}} | escape -%}
-{%- assign course_url = {{course.url}} | escape -%}
-{%- assign duration = {{course.duration}} | escape -%}
-{%- assign complexity = {{course.complexity}} | escape -%}
+        {%- assign course_title = {{course.title}} | escape -%}
+        {%- assign course_image = {{course.image}} | escape -%}
 
-{%- include {{style_html}}.html -%}
-{%- endfor -%}
+        {%- if course.soon -%}
+            {%- assign course_desc = 'Coming soon' | escape -%}
+            {%- assign course_url = '/coming'| escape -%}
+            {%- assign duration = 'TBA'| escape -%}
+            {%- assign complexity = 'TBA' | escape -%}
+            {%- include course-card-soon.html -%}
+        {%- else -%}
+            {%- assign course_desc = {{course.description}} | escape -%}
+            {%- assign course_url = {{course.url}} | escape -%}
+            {%- assign duration = {{course.duration}} | escape -%}
+            {%- assign complexity = {{course.complexity}} | escape -%}
+
+            {%- include course-card.html -%}
+        {%- endif -%}
+    {%- endfor -%}
 {%- endif -%}

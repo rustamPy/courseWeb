@@ -1276,3 +1276,23 @@ footer p a:hover {
     background-color: grey;
     color: white;
 }
+
+
+.outer-div {
+    position: relative;
+}
+
+.inner-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    color: var(--spec-orange);
+    z-index: 1;
+    font-weight: 800;
+    background-color: var(--spec-blue);
+    border-radius: 10px;
+    padding: 10px 70px;
+}
