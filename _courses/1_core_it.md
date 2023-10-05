@@ -15,7 +15,7 @@ author: Rustam Karimov
 
 <h4><i class="fa-regular fa-eye" style="color: #000000;"></i> Course Overview: </h4>
 <p>
-    The concept of an IT entry-level position may not be applicable in the traditional sense. At
+    The concept of an IT entry-level may not be applicable in the traditional sense. At
     this age, the focus
     should be on
     <b> introducing children to basic computer literacy and technology concepts</b>

@@ -1254,7 +1254,7 @@ footer p a:hover {
     margin: 2px;
     font-size: 12px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .label-easy {
@@ -1269,5 +1269,10 @@ footer p a:hover {
 
 .label-medium {
     background-color: #b08800;
+    color: white;
+}
+
+.label-grey {
+    background-color: grey;
     color: white;
 }
