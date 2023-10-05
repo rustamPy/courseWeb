@@ -752,6 +752,40 @@ section.contact {
     margin-right: 20px;
 }
 
+.slider-thumb::before {
+    position: absolute;
+    content: "";
+    left: 30%;
+    top: 20%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(#ffc180, var(--spec-orange));
+    border-radius: 62% 47% 8% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: slimerShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: slimerShape 5s linear infinite;
+}
+
+@keyframes slimerShape {
+    0%, 100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
+}
+
 .content h1 {
     text-align: center;
 }
@@ -1053,6 +1087,7 @@ object {
 .footer-list a {
     color: white;
 }
+
 .footer-list a:hover {
     color: var(--spec-orange)
 }
@@ -1197,7 +1232,7 @@ footer p a:hover {
 
 }
 
-.footer-content .greyed-logo a{
+.footer-content .greyed-logo a {
     color: grey;
     text-decoration: none;
     padding-left: 0 !important;
@@ -1205,7 +1240,7 @@ footer p a:hover {
 }
 
 
-.footer-content .greyed-logo a span{
+.footer-content .greyed-logo a span {
     color: grey;
     padding-left: 0 !important;
 
