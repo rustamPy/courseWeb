@@ -4,6 +4,9 @@ layout: base
 
 <section class="section content">
     <h1> {{page.title}} </h1>
+    <div style="text-align: center;">
+        <span class="label label-{{page.complexity}}">{{page.complexity}}</span>
+    </div>
     <div style="display: flex; flex-direction: column;">
 
         <img src="../assets/images/courses-thumbnails/{{page.image}}.png"
@@ -12,11 +15,16 @@ layout: base
 
             <!-- Course Title-->
             <h4><i class="fa-solid fa-monument"></i> Course Title:</h4>
-            <p><span style="color: red;"> {{page.title}}</span> Age: {{page.age}} </p>
+            <div style="text-align: center; font-size: 40px; font-weight: 600;">
+                <p><span style="color: red;"> {{page.title}}</span> Age: {{page.age}} </p>
+            </div>
             {{content}}
             <!-- Instructor Information -->
+
             <h4><i class="fa-solid fa-person-chalkboard"></i> Instructor Information: </h4>
-            <p> {{page.author}} </p>
+            <div style="text-align: center;">
+                <p> {{page.author}} </p>
+            </div>
         </div>
     </div>
     <hr>

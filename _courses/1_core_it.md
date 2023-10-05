@@ -7,7 +7,7 @@ description: This course is designed to provide you with a solid foundation
 image: cit_base
 age: 8-9
 duration: 3 months
-complexity: basic
+complexity: easy
 author: Rustam Karimov
 ---
 

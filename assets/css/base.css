@@ -779,6 +779,10 @@ section.contact {
     text-align: center;
 }
 
+.content span {
+    text-align: center;
+}
+
 @media screen and (max-width: 500px) {
     .content .content-info {
         columns: 1;
@@ -795,10 +799,6 @@ section.contact {
     }
 }
 
-
-.content p, ol {
-    font-size: 14px;
-}
 
 .content img {
     width: 350px;
@@ -1247,5 +1247,32 @@ footer p a:hover {
 }
 
 .col-xs-12 hr {
+    color: white;
+}
+
+
+/* LABELS */
+
+.label {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.label-easy {
+    background-color: #28a745;
+    color: white;
+}
+
+.label-hard {
+    background-color: #D73A49FF;
+    color: white;
+}
+
+.label-medium {
+    background-color: #b08800;
     color: white;
 }
