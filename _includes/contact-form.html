@@ -3,7 +3,7 @@
         <p>Hello,</p>
 
         <p>My name is <input id='name' type="text" class="name" placeholder="your name" required>
-            I'm <input id='age' type="number" class="age" placeholder="5" required> years old
+            I'm <input id='age' type="number" class="age" placeholder="0" required> years old
             and I'm writting tou you since I'm interested in
             <select id="course" name="course">
                 {%- if site.courses.size > 0 -%}
@@ -12,12 +12,14 @@
                 {%- endfor -%}
                 {%- endif -%}
             </select>.</p>
-        <p>This is my <input name="email" type="email" id="email" placeholder="email address" required></p>
-        <p>Additionally, I would like to ask you few question:</p>
+        <p>This is my email: <input name="email" type="email" id="email" placeholder="mine@craft.com" required>
+        and/or phone number: <input name="phone" type="number" id="phone" placeholder="+994" required>
+        </p>
+        <p>Additionally, I would like to ask you few questions:</p>
         <textarea name="message" id="message" placeholder="Your message..."></textarea>
         <br>
         <br>
-        <p>Hope to get in touch soon. Cheers!</p>
+        <p>Hope to get in touch soon. <br>Cheers!</p>
         <input type="button" class="button" onclick="telegramIt();" id="submit" value="Send letter">
     </fieldset>
 </form>

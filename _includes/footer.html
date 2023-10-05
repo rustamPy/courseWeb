@@ -1,32 +1,50 @@
 <footer>
 
-    <div class="foot-container">
+    <div class="footer-content">
+        <div class="footer-fluid wrap">
+            <div class="footer-row">
+                <div class="col-xs-12">
+                    <div class="greyed-logo">
+                        {%- include logo.html logo_size="20px" -%}
+                    </div>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <p>I'm your dedicated instructor 👨‍💻 bringing years of experience and expertise to the table.
+                        With a passion for teaching and a deep understanding of technology, I'm here to guide you
+                        through your learning journey.</p>
+                    <p style="font-size: 25px;"><i class="fa-brands fa-whatsapp" style="color: var(--spec-orange);"></i>
+                        +48 573-456-169</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md">
+                    <div class="footer-row">
+                        <div class="col-xs-12 col-sm-6 col-md">
+                            <ul class="footer-list">
+                                <li class="footer-list-items footer-list-header">Site map</li>
+                                <li class="footer-list-items"><a href="/"> Home </a></li>
+                                <li class="footer-list-items"><a href="/about"> About </a></li>
+                                <li class="footer-list-items"><a href="/courses-list"> Courses </a></li>
+                                <br>
+                                <li class="footer-list-items"><a href="/articles"> Articles </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        <span class="greyed-logo">
-        {%- include logo.html logo_size="20px" -%}
-        </span>
-        <div class="columns">
-            <div class="col-map">
-                <h3>Site Map</h3>
-                <ul>
-                    {%- for page in site.pages -%}
-                    <li><a href="{{page.url}}"> {{page.title}} </a></li>
-                    {%- endfor -%}
-                    <li><a href="/articles"> Articles </a></li>
+            </div>
 
-                </ul>
+        </div>
+        <div class="copyright">
+            <div class="col-md-12">
+                <p><i class="fa fa-copyright"></i> 2023 | Learn with Rustam
+                </p>
             </div>
         </div>
 
 
     </div>
 
-    <div class="copyright">
-        <div class="col-md-12">
-            <p><i class="fa fa-copyright"></i> 2023 | Learn with Rustam
-            </p>
-        </div>
-    </div>
 </footer>
 
 

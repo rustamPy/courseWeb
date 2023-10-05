@@ -13,7 +13,8 @@ function telegramIt() {
     //const telegram_acc = document.getElementById("telegram_acc").value;
     const course = document.getElementById("course").value;
     const message = document.getElementById("message").value;
-    const text = `Name: ${name}\nAge: ${age}\nEmail: ${email}\nTelegram Account: \nCourse: ${course}\nMessage: ${message}`;
+    const phone = document.getElementById("phone").value;
+    const text = `Name: ${name}\nAge: ${age}\nEmail: ${email}\nTelegram Account: \nCourse: ${course}\nMessage: ${message}\nPhone: ${phone}`;
     fetch(`https://api.telegram.org/bot${t}/sendMessage?chat_id=@learnwithrustamnow&text=${encodeURIComponent(text)}`)
         .then(response => {
             if (!response.ok) {
