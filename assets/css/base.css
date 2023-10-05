@@ -16,9 +16,13 @@
     --spec-orange: #F6A426;
     --spec-blue: #17233b;
     --spec-blue-darker: #101828FF;
-    --easy-color: #15da15;
-    --medium-color: #cb9d4c;
-    --hard-color: #e30707;
+    --easy: #28a745;
+    --medium: #b08800;
+    --hard: #D73A49FF;
+    --easy-grad: radial-gradient(#64EF83FF, var(--easy));
+    --medium-grad: radial-gradient(#FDDE80FF, var(--medium));
+    --hard-grad: radial-gradient(#F3727EFF, var(--hard));
+    --soon-grad: radial-gradient(var(--spec-blue), var(--spec-blue-darker));
     --spacing-md: 32px;
     --gutter-width: var(--spacing-md);
     --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
@@ -755,11 +759,12 @@ section.contact {
 .slider-thumb::before {
     position: absolute;
     content: "";
-    left: 30%;
-    top: 20%;
+    left: var(--left);
+    top: var(--top);
     width: 250px;
     height: 250px;
-    background: radial-gradient(#ffc180, var(--spec-orange));
+    background: radial-gradient(var(--col_1), var(--col_2));
+    background: var(--bg);
     border-radius: 62% 47% 8% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
     animation: slimerShape 5s linear infinite;
@@ -1290,21 +1295,8 @@ footer p a:hover {
     font-size: 12px;
     font-weight: bold;
     border-radius: 10px;
-}
-
-.label-easy {
-    background-color: #28a745;
     color: white;
-}
-
-.label-hard {
-    background-color: #D73A49FF;
-    color: white;
-}
-
-.label-medium {
-    background-color: #b08800;
-    color: white;
+    background-color: var(--custom-col);
 }
 
 .label-grey {
@@ -1327,7 +1319,6 @@ footer p a:hover {
     color: var(--spec-orange);
     z-index: 1;
     font-weight: 800;
-    background-color: var(--spec-blue);
     border-radius: 10px;
     padding: 10px 70px;
 }

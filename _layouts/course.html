@@ -2,11 +2,14 @@
 layout: base
 ---
 
+<style>
+</style>
+
 <section class="section content">
-    <div class="slider-thumb">
+    <div class="slider-thumb" style="--bg: var(--{{page.complexity}}-grad); --left: 30%; --top: 20%;">
         <h1> {{page.title}} </h1>
-        <div style="    display: flex; justify-content: center;">
-            <span class="label label-{{page.complexity}}">{{page.complexity}}</span>
+        <div style="display: flex; justify-content: center;">
+            <span class="label" style="--custom-col: var(--{{page.complexity}})">{{page.complexity}}</span>
             <span class="label label-grey">{{page.duration}}</span>
         </div>
         <div style="display: flex; flex-direction: column;">
