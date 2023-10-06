@@ -833,9 +833,16 @@ section.contact {
 }
 
 @media screen and (max-width: 500px) {
-    .content .content-info {
+    .content.content-info {
         columns: 1;
-        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .content .content-info {
+        padding: 0 0;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
