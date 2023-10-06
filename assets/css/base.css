@@ -116,6 +116,8 @@ a.menu-link {
         -ms-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
         transition: all 0.3s ease-out;
+        text-align: center;
+
     }
 
     .js nav[role="navigation"] {
@@ -127,6 +129,7 @@ a.menu-link {
         max-height: 20em;
         height: 20em;
         overflow-y: scroll;
+        text-align: center;
     }
 
     nav[role="navigation"] ul {
@@ -200,7 +203,7 @@ a.menu-link {
 
 .main-header .logo {
     float: left;
-    line-height: 80px;
+    line-height: 78px;
     padding-left: 60px;
 }
 
@@ -262,6 +265,18 @@ a.menu-link {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .main-menu li .sub-menu {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 44px;
+        margin-left: -41px;
+    }
+
 }
 
 .row {

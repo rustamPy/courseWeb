@@ -1,0 +1,57 @@
+---
+layout: base
+---
+<style>
+    .countdown-timer {
+        color: var(--spec-blue);
+    }
+
+</style>
+
+<div class="content content-info margin-down">
+    <img src="/assets/images/coming_soon-1.png" style="width: 300px; margin: 0 auto; display: block">
+    <h1> Upcoming courses are on the horizon: </h1>
+    <ol>
+        {%- for course in site.courses -%}
+        {%- if course.soon -%}
+        <li>{{course.title}} <span class="label" style="--custom-col: var(--{{course.complexity}})">{{course.complexity}}</span>&nbsp;<span
+                class="label label-grey">{{course.duration}}</span></li>
+        <div style="color: var(--spec-orange); font-weight: 600;">
+            <span>Release date: <span style="color: var(--spec-blue);">{{course.release-date}}</span></span> <br>
+            <span>Time left: </span> <span class="countdown-timer" data-release-date="{{course.release-date}}"><span class="countdown"></span></span>
+        </div>
+        {%- endif -%}
+        {%- endfor -%}
+    </ol>
+</div>
+
+<script>
+    let countdownTimers = document.querySelectorAll(".countdown-timer");
+    console.log(countdownTimers)
+    // Loop through each countdown timer element
+    countdownTimers.forEach(function(timer) {
+        // Get the release date from the data attribute
+        let releaseDate = new Date(timer.getAttribute("data-release-date")).getTime();
+        console.log(releaseDate)
+        // Get the corresponding countdown element inside the timer
+        let countdown = timer.querySelector(".countdown");
+
+        // Update the countdown every second
+        let x = setInterval(function() {
+            let now = new Date().getTime();
+            let timeRemaining = releaseDate - now;
+
+            let days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            countdown.textContent = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (timeRemaining < 0) {
+                clearInterval(x);
+                countdown.textContent = "RELEASED!";
+            }
+        }, 1000);
+    });
+</script>
