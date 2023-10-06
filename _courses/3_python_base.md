@@ -6,7 +6,7 @@ description: This course serves as an entrance to coding and software
   the Python programming language and delves into the core concepts of Object-Oriented
   Programming (OOP).
 image: python_entry
-age: 12-15
+age: 11-15
 duration: 4 months
 complexity: medium
 author: Rustam Karimov
