@@ -1,5 +1,6 @@
 .course-window {
-    box-shadow: 3px -1px 9px 0px #1e396e2b;
+    box-shadow: 10px 7px 9px 1px #54565b2b;
+    border-radius: 0 20px 20px 0;
 }
 
 .course-window > .card > .card_content p {
@@ -36,16 +37,17 @@
     padding: 6px;
     /*transform: rotate(45deg);*/
     object-fit: cover;
+    border-radius: 20px;
 }
 
 
 .course-window .card {
-    border-radius: 0.25rem;
+    border-radius: 0 20px 20px 0;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     padding-left: 30px;
-    background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px), #66afe1 0 1.2rem) right bottom /100% 100%, linear-gradient(red 0 0) 30px 0/2px 100% #fff;
+    background: right bottom /100% 100%, linear-gradient(red 0 0) 30px 0/2px 100%, radial-gradient(#ffffff, #c9c9c9);
     background-repeat: no-repeat;
     line-height: 1.2rem;
     -webkit-mask: radial-gradient(circle .8rem at 2px 50%, #0000 98%, #000) 0 0/100% 2.4rem;
