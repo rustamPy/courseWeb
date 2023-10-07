@@ -4,7 +4,7 @@ title:  Core IT - Intermediate
 description: This course covers a range of more complex topics and subjects to
   build upon the foundational knowledge gained in the Entry level of IT.
 image: cit_inter
-age: 8-9
+age: 9-12
 duration: 3 months
 complexity: medium
 author: Rustam Karimov
