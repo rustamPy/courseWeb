@@ -50,6 +50,11 @@ a:hover {
     text-decoration: none;
 }
 
+hr {
+    background: rgba(23, 35, 59, 0.11);
+    height: 1px;
+    border-radius: 10px;
+}
 
 .section-heading {
     text-align: center;
@@ -914,7 +919,7 @@ section.tabs-content article img {
 
 .about-container {
     width: 70%;
-    text-align: center;
+    text-align: left;
 }
 
 .about-container h1 {
@@ -928,8 +933,8 @@ section.tabs-content article img {
 .about-container p {
     text-align: left;
     color: #3b3b3b;
-    font-size: 35px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 600;
     letter-spacing: 0.3px;
     line-height: 2em;
 }
@@ -968,6 +973,8 @@ section.tabs-content article img {
 
 .row.three-cols {
     margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
 }
 
 
