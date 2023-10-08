@@ -3,6 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-nav_bar: 1
+nav_bar: home
 title: Home
 ---

@@ -1,4 +1,5 @@
 ---
+nav_bar: not-home
 layout: course
 title: Python - Entry
 description: This course serves as an entrance to coding and software

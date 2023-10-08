@@ -1,4 +1,5 @@
 ---
+nav_bar: not-home
 layout: course
 title:  Core IT - Intermediate
 description: This course covers a range of more complex topics and subjects to

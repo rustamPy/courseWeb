@@ -1,4 +1,5 @@
 ---
+nav_bar: not-home
 layout: course
 title: Python - Intermediate
 description: TBA

@@ -1,4 +1,5 @@
 ---
+nav_bar: not-home
 layout: course
 title: Core IT - Entry
 description: This course is designed to provide you with a solid foundation

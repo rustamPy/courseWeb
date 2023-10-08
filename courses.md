@@ -5,4 +5,5 @@
 layout: courses-list
 title: Courses
 permalink: /courses-list
+nav_bar: not-home
 ---

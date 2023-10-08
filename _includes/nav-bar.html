@@ -1,8 +1,10 @@
 <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
 <nav id="menu" class="main-nav" role="navigation">
     <ul class="main-menu">
+        {%- if page.nav_bar == "home" -%}
         <li><a href="#home">Home</a></li>
-        <li class="has-submenu"><a href="#whoami">About</a>
+        <li class="has-submenu">
+            <a href="#whoami">About</a>
             <ul class="sub-menu">
                 <li><a href="#whoami">Who I am?</a></li>
                 <li><a href="#whatido">What I do?</a></li>
@@ -12,5 +14,11 @@
         </li>
         <li><a href="#read-more">Courses</a></li>
         <li><a href="#contact">Contact</a></li>
+        {%- elsif page.nav_bar == "not-home" -%}
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/courses-list">Courses</a></li>
+        <li><a href="/coming-courses">Upcoming Courses</a></li>
+        {%- endif -%}
     </ul>
 </nav>
