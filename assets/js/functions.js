@@ -33,3 +33,24 @@ function telegramIt() {
             console.error("Error:", error);
         });
 }
+
+function showArticle(articleId, l) {
+    // Get all the article elements
+    let articles = document.querySelectorAll('.tabs-content article');
+    // Loop through all articles and hide them
+    for (let i = 0; i < articles.length; i++) {
+        articles[i].style.display = 'none';
+    }
+
+    // Show the selected article
+    let selectedArticle = document.getElementById(articleId);
+    selectedArticle.style.display = 'block';
+
+    let links = document.querySelectorAll('.test_1 p');
+    for (let i = 0; i < links.length; i++) {
+        links[i].classList.remove('active-tab');
+    }
+
+    // Set the color of the clicked link to red
+    l.classList.add('active-tab');
+}
