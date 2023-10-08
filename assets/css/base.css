@@ -40,7 +40,7 @@ body {
 /* General */
 
 a {
-    color: #3CF;
+    color: #a3ff33;
     text-decoration: none;
 }
 
@@ -53,6 +53,7 @@ a:hover {
 hr {
     background: rgba(23, 35, 59, 0.11);
     height: 1px;
+    margin-top: 55px;
     border-radius: 10px;
 }
 
@@ -620,7 +621,7 @@ section.steps .connections-head h1 {
     padding: 10px;
     margin-left: 15px;
     width: 80vw;
-    height: 300px;
+    height: auto;
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -645,6 +646,7 @@ section.steps .connections-head h1 {
     align-items: center;
     font-size: 70px;
 }
+
 
 .connections-step .step-content p {
     font-size: 15px;
@@ -1044,11 +1046,10 @@ section.tabs-content article img {
 
 /* DOCUMENT REVIEWER*/
 object {
-    width: 800px;
+    width: 1400px;
     height: 500px;
-    margin: auto;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
     box-shadow: 8px -9px 90px #bbbbbb;
 }
 
