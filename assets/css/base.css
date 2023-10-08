@@ -966,7 +966,7 @@ section.tabs-content article img {
 }
 
 .rounded-images {
-    margin-top: 50px;
+    margin: 50px -45px 0 -45px;
 }
 
 .rounded-images img {
