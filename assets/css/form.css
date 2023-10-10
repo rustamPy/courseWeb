@@ -36,12 +36,28 @@
 .form_contact input, select, select option, textarea {
     color: black;
     border: none;
-    background-color: #f5f5f57d !important;
+    background-color: #f5f5f57d;
 
 }
 
+.form_contact #submit {
+    width: 250px;
+    border-radius: 10px;
+}
+
+
+.form_contact #submit:enabled {
+    background-color: var(--spec-orange);
+}
+
+.form_contact #submit:enabled:hover {
+    background-color: var(--spec-blue);
+    color: white;
+}
+
+
 .form_contact input::placeholder, textarea::placeholder {
-    color: #4e936a !important;
+    color: #4e936a;
 }
 
 .form_contact input.age {
@@ -50,11 +66,7 @@
 .form_contact input.name {
     width: 250px;
 }
-.form_contact input.button {
-    width: 250px;
-    background-color: orange !important;
-    border-radius: 10px;
-}
+
 
 .form_contact textarea {
     width: 300px;
@@ -77,10 +89,6 @@
 
 }
 
-.form_contact input.button:hover {
-    background-color: #1edc3c !important;
-}
-
 .form_contact span {
     position: relative;
     line-height: 40px;
@@ -88,23 +96,4 @@
 
 .form_contact button:hover {
     transform: translateX(10px);
-}
-
-.form__field {
-    display: inline;
-    color: #7DB665;
-    outline: none;
-}
-
-
-.form__field:empty {
-    display: inline-block;
-    color: #DDD;
-}
-.form__field:empty:before, .form__field:empty:focus:before {
-    content: attr(data-placeholder);
-}
-
-svg {
-    display: none;
 }

@@ -1,3 +1,17 @@
+document.getElementById('submit').addEventListener('click', function (event) {
+    const form = document.getElementById('contact-form');
+    const button = this;
+    if (form.checkValidity()) {
+        this.onclick = telegramIt();
+
+    } else {
+        // The form is not valid, manually trigger validation
+        form.reportValidity();
+        event.preventDefault();
+    }
+});
+
+
 function telegramIt() {
     const [p1, p2, p3, p4, p5, p6, p7, p8] =
         ['', null, '66', 'YPttx3', 'DdFKLT', 'Es', 'yTADPW'];
