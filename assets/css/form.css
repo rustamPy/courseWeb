@@ -64,26 +64,29 @@
     width: 50px;
 }
 .form_contact input.name {
-    width: 250px;
+    width: auto;
 }
-
 
 .form_contact textarea {
     width: 300px;
 }
 
-@media screen and (max-width: 500px) {
+
+
+@media screen and (max-width: 400px) {
+
     .form_contact input.name {
         width: auto;
     }
 
-    .form_contact input.button {
+    .form_contact #submit {
         width: auto;
+        padding: 10px;
         font-size: 30px;
     }
 
     .form_contact textarea {
-        width: 150px;
+        width: auto;
     }
 
 
