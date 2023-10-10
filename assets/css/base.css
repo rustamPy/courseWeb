@@ -40,13 +40,12 @@ body {
 /* General */
 
 a {
-    color: #a3ff33;
     text-decoration: none;
 }
 
 
 a:hover {
-    color: #FC3;
+    color: var(--spec-orange);
     text-decoration: none;
 }
 

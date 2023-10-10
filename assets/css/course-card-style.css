@@ -74,3 +74,11 @@
 .course-window .card_info p {
     font-weight: bold;
 }
+
+.course-window .card_info a {
+    color: var(--spec-blue);
+}
+
+.course-window .card_info a:hover {
+    color: var(--spec-orange);
+}
