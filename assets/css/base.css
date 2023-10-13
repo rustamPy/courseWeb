@@ -272,6 +272,7 @@ a.menu-link {
     transition: all 0.5s;
     margin-top: -20px;
     margin-left: 0;
+    z-index: 1;
 }
 
 @media screen and (max-width: 500px) {
