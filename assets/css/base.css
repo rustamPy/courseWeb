@@ -58,7 +58,7 @@ hr {
 
 .section-heading {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 
 .section-heading h2:before {
@@ -289,6 +289,10 @@ a.menu-link {
     margin-right: -15px;
     margin-left: -15px;
     align-items: center;
+}
+
+.row.course-row {
+    flex-direction: column;
 }
 
 .main-menu li:hover .sub-menu {
@@ -667,7 +671,7 @@ section.steps .connections-head h1 {
 
 section.courses {
     background: linear-gradient(to bottom, #000000, var(--spec-blue));
-    padding: 0 30px 100px 30px;
+    padding: 0 30px 0 30px;
 }
 
 section.courses .item img {
