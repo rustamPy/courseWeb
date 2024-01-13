@@ -6,7 +6,6 @@ description: This course is designed to provide you with a solid foundation
   in Information Technology (IT) concepts and practices. It serves as an
   essential stepping stone for individuals who are new to the world of IT.
 image: cit_base
-age: 7-10
 duration: 3 months
 complexity: easy
 author: Rustam Karimov
