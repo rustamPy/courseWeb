@@ -5,35 +5,22 @@ nav_bar: not-home
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: var(--spec-orange);
-  }
-
-  .blink {
-    animation: blinker 1s linear infinite;
-
-  }
-
-
-  @keyframes blinker {
-    50% {
-      opacity: 0;
+    .container {
+        max-width: 600px;
+        text-align: center;
     }
-  }
+
+    h1 {
+        margin: 30px 0;
+        font-size: 4em;
+        line-height: 1;
+        letter-spacing: -1px;
+        color: var(--spec-orange);
+    }
 </style>
 
 <div class="container margin-down">
-  <h1 class="blink">404</h1>
-  <i class="fa-solid fa-triangle-exclamation  " style="font-size: 190px;"></i>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+    <img alt="404 - Page not found" src="assets/images/404.svg">
+    <p><strong>Page not found :(</strong></p>
+    <p>The requested page could not be found.</p>
 </div>
