@@ -44,11 +44,6 @@ a {
 }
 
 
-a:hover {
-    color: var(--spec-orange);
-    text-decoration: none;
-}
-
 hr {
     background: rgba(23, 35, 59, 0.11);
     height: 1px;
@@ -148,7 +143,6 @@ a.menu-link {
     }
 
     nav[role="navigation"] li a {
-        display: block;
         padding: 15px 0;
         /*border-bottom: 1px solid rgba(250,250,250,0.25);*/
         text-align: center;
@@ -242,7 +236,6 @@ a.menu-link {
 }
 
 .main-menu li a {
-    padding: 10px 15px;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -328,14 +321,23 @@ a.menu-link {
     transition: all 0.5s;
 }
 
-.main-menu li .sub-menu li a:hover {
-    color: var(--spec-orange);
-    border: none;
-}
 
-.main-nav li:hover a,
 .main-nav li.active a {
     border: 2px solid var(--spec-orange);
+}
+
+.main-nav li a:hover {
+    color: var(--spec-orange);
+    text-decoration: none;
+}
+
+.main-nav li a.stream:hover {
+    color: #c03f3f;
+    text-decoration: none;
+}
+
+.main-nav li a.stream {
+    color: white;
 }
 
 .main-banner {
@@ -1123,13 +1125,19 @@ object {
     list-style: none;
 }
 
-.footer-list a {
+.footer-list a, a.stream {
     color: white;
+    margin-right: 10px;
 }
 
 .footer-list a:hover {
-    color: var(--spec-orange)
+    color: var(--spec-orange);
+    text-decoration: none;
 }
+.footer-list a.stream:hover {
+    color: #c03f3f;
+}
+
 
 .footer-list-items {
     padding: 4px 0;
@@ -1169,10 +1177,6 @@ object {
 .col-map a {
     color: #fff;
     text-decoration: none;
-}
-
-.col-map a:hover {
-    color: var(--spec-orange);
 }
 
 .columns {
@@ -1270,4 +1274,37 @@ object {
     font-weight: 800;
     border-radius: 10px;
     padding: 10px 70px;
+}
+
+.streaming {
+    margin: 100px auto auto auto;
+    text-align: center;
+    font-size: 60px;
+}
+
+.streaming-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #c03f3f;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

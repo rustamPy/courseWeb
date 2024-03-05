@@ -53,3 +53,11 @@
     $("#tabs").tabs()
 
 })(jQuery);
+
+const blinkingDot = document.getElementById('blinkingDot');
+const stream = document.getElementById('streamingText')
+
+console.log(blinkingDot)
+setInterval(function() {
+    blinkingDot.style.opacity = (blinkingDot.style.opacity == 0) ? 1 : 0;
+}, 500);
